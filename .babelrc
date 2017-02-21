@@ -1,0 +1,4 @@
+{
+  presets: ["airbnb"],
+  plugins: ["transform-class-properties"]
+}
