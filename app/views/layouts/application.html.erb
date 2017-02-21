@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OpensancaJobs</title>
+    <title>OpenSanca Jobs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+
   </head>
 
   <body>
-    <%= yield %>
+    <!-- Fixed navbar -->
+    <%= render "shared/navbar" %>
+
+    <div class="container">
+      <%= yield %>
+    </div> <!-- /container -->
   </body>
 </html>
