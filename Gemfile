@@ -23,9 +23,14 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
+  # Debuggging
   gem 'awesome_print'
   gem 'pry'
   gem 'pry-nav'
+
+  # Testing
+  gem 'fuubar'
+  gem 'rspec-rails'
 end
 
 group :development do
