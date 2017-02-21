@@ -39,8 +39,9 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    awesome_print (1.7.0)
     builder (3.2.3)
-    byebug (9.0.6)
+    coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -81,6 +82,12 @@ GEM
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     pg (0.19.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-nav (0.2.4)
+      pry (>= 0.9.10, < 0.11.0)
     puma (3.7.1)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -119,6 +126,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    slop (3.6.0)
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -154,19 +162,20 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
+  awesome_print
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
   pg (~> 0.18)
+  pry
+  pry-nav
   puma (~> 3.0)
   rails (~> 5.0.1)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
-  tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
 
