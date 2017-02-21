@@ -29,6 +29,7 @@ group :development, :test do
   gem 'pry-nav'
 
   # Testing
+  gem 'capybara'
   gem 'fuubar'
   gem 'rspec-rails'
 end
