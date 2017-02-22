@@ -1,3 +1,8 @@
+# Build Status
+
+[![Build
+Status](https://travis-ci.org/opensanca/opensanca_jobs.svg?branch=master)](https://travis-ci.org/opensanca/opensanca_jobs)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
