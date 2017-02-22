@@ -24,6 +24,7 @@ gem "jbuilder", "~> 2.5"
 
 group :development, :test do
   # Code analysis
+  gem "rails_best_practices"
   gem "rubocop-github"
 
   # Debuggging
