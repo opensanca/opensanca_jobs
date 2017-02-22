@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'jobs/index'
+  get 'vacancies/index'
 
-  root to: 'jobs#index'
+  root to: 'vacancies#index'
 end
