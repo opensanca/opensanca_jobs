@@ -43,6 +43,7 @@ GEM
     arel (7.1.4)
     ast (2.3.0)
     awesome_print (1.7.0)
+    brakeman (3.5.0)
     builder (3.2.3)
     capybara (2.12.1)
       addressable
@@ -228,6 +229,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  brakeman
   capybara
   coffee-rails (~> 4.2)
   fuubar
