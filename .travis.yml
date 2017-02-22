@@ -9,6 +9,6 @@ before_script:
   - bundle exec rake db:setup
 script:
   - bundle exec brakeman --exit-on-warn
-  - bundle exec rubocop -c .rubocop.yml
+  - bundle exec rubocop -c .rubocop_github.yml
   - bundle exec rails_best_practices
   - bundle exec rspec
