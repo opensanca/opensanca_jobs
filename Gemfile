@@ -1,23 +1,19 @@
 source "https://rubygems.org"
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
-gem "rails", "~> 5.0.1"
+gem "rails", "~> 5.1.0.beta1"
 
 gem "pg", "~> 0.18"
 
-gem "puma", "~> 3.0"
+gem "puma", "~> 3.7"
 
 # Assets
 gem "coffee-rails", "~> 4.2"
 gem "jquery-rails"
-gem "sass-rails", "~> 5.0"
+gem "sass-rails", github: "rails/sass-rails"
 gem "sprockets-commoner"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "webpacker"
 
 # Json generation
 gem "jbuilder", "~> 2.5"
@@ -37,6 +33,7 @@ group :development, :test do
   gem "capybara"
   gem "fuubar"
   gem "rspec-rails"
+  #gem "selenium-webdriver"
 end
 
 group :development do
