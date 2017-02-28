@@ -4,17 +4,17 @@
 
 <%= form_for @vacancy do |f| %>
   <div class="form-group">
-    <%= f.label :job_title %>
+    <%= f.label :job_title, t('.job_title') %>
     <%= f.text_field :job_title, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.label :location %>
+    <%= f.label :location, t('.location') %>
     <%= f.text_field :location, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.label :description %>
+    <%= f.label :description, t('.description') %>
     <%= f.text_area :description, rows: 8, class: 'form-control' %>
   </div>
 
@@ -26,17 +26,17 @@
     <br>
 
     <div class="form-group">
-      <%= f.label :company_name %>
+      <%= f.label :company_name, t('.company_name') %>
       <%= f.text_field :company_name, class: 'form-control' %>
     </div>
 
     <div class="form-group">
-      <%= f.label :company_url %>
+      <%= f.label :company_url, t('.company_url') %>
       <%= f.text_field :company_url, class: 'form-control' %>
     </div>
 
     <div class="form-group">
-      <%= f.label :company_email %>
+      <%= f.label :company_email, t('.company_email') %>
       <%= f.text_field :company_email, class: 'form-control' %>
     </div>
   </div>

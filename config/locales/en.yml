@@ -1,10 +1,19 @@
 en:
+  vacancies:
+    index:
+      post_vacancy: 'Post a new Vacancy'
+      title:        'All Vacancies'
+    new:
+      job_title:     'Job Title'
+      location:      'Location'
+      description:   'Description'
+      company_name:  'Name'
+      company_url:   'URL'
+      company_email: 'E-mail'
+    create:
+      success: 'Vacancy posted with success.'
+
   helpers:
     submit:
       vacancy:
         create: 'Post vacancy'
-    label:
-      vacancy:
-        company_name:  'Name'
-        company_url:   'URL'
-        company_email: 'E-mail'
