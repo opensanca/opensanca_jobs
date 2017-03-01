@@ -1,3 +1,6 @@
+AllCops:
+  Excludes:
+    - node_modules/**/*
 inherit_gem:
   rubocop-github:
     - config/default.yml

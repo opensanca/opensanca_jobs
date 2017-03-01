@@ -3,12 +3,20 @@ rvm:
 - 2.4.0
 services:
   - postgresql
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
 install:
   - bundle install --retry=3
+  - nvm install 6.7.0
 before_script:
+  - nvm use 6.7.0
   - bundle exec rake db:setup
+  - bin/yarn
 script:
   - bundle exec brakeman --exit-on-warn
   - bundle exec rubocop -c .rubocop_github.yml
   - bundle exec rails_best_practices
   - bundle exec rspec
+cache:
+  yarn: true
