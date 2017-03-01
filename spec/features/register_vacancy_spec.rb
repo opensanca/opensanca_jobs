@@ -19,6 +19,7 @@ RSpec.feature "User register a Vacancy" do
     click_button "Post vacancy"
 
     expect(page).to have_text I18n.t("vacancies.create.success")
+    expect(page).to have_text "Stormtrooper"
   end
 
   scenario "with invalid informations" do

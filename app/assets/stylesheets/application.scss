@@ -2,8 +2,7 @@
 $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 
-body > div.container {
-  margin-top: 4%;
+body > div.container { margin-top: 4%;
 }
 
 .field_with_errors {
@@ -11,5 +10,13 @@ body > div.container {
 
   label {
     color: #a94442;
+  }
+}
+
+.vacancy-list {
+  padding: 0 0;
+
+  .vacancy-item {
+    border-bottom: 1px solid #000;
   }
 }
