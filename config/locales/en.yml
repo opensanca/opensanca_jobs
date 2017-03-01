@@ -3,6 +3,7 @@ en:
     index:
       post_vacancy: 'Post a new Vacancy'
       title:        'All Vacancies'
+      no_vacancies: 'Sorry, no vacancies posted 😔'
     new:
       job_title:     'Job Title'
       location:      'Location'

@@ -8,10 +8,6 @@ module ApplicationHelper
     }[flash_type.to_sym] || flash_type.to_s
   end
 
-  def menu_class(path)
-    current_page?(path) ? "active" : ""
-  end
-
   def error_tag(model, attribute)
     if model.errors.has_key? attribute
       content_tag(
@@ -20,5 +16,13 @@ module ApplicationHelper
         class: "error_message"
       )
     end
+  end
+
+  def menu_class(path)
+    current_page?(path) ? "active" : ""
+  end
+
+  def no_content_message(message)
+    content_tag(:div, content_tag(:h3, message, class: 'no-vacancies'))
   end
 end
