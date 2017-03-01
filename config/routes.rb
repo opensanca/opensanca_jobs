@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  resources :vacancies
-  get "vacancies/index"
-  get "vacancies/new"
+  resources :vacancies, only: [:new, :index, :create]
 
   root to: "vacancies#index"
 end
