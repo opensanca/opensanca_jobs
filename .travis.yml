@@ -5,7 +5,9 @@ services:
   - postgresql
 install:
   - bundle install --retry=3
+  - nvm install 6.7.0
 before_script:
+  - nvm use 6.7.0
   - bundle exec rake db:setup
   - bin/yarn
 script:
