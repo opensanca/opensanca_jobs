@@ -7,6 +7,7 @@ install:
   - bundle install --retry=3
 before_script:
   - bundle exec rake db:setup
+  - bin/yarn
 script:
   - bundle exec brakeman --exit-on-warn
   - bundle exec rubocop -c .rubocop_github.yml

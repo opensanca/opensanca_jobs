@@ -33,6 +33,7 @@ group :development, :test do
   gem "capybara"
   gem "fuubar"
   gem "rspec-rails"
+  gem "shoulda-matchers"
   #gem "selenium-webdriver"
 end
 
