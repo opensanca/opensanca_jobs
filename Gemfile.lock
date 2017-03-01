@@ -83,6 +83,8 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     ffi (1.9.17)
     fuubar (2.2.0)
       rspec-core (~> 3.0)
@@ -248,6 +250,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.2)
   factory_girl_rails
+  faker
   fuubar
   jbuilder (~> 2.5)
   jquery-rails
