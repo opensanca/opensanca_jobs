@@ -1,7 +1,6 @@
 # Build Status
 
-[![Build
-Status](https://travis-ci.org/opensanca/opensanca_jobs.svg?branch=master)](https://travis-ci.org/opensanca/opensanca_jobs)
+[![Build Status](https://semaphoreci.com/api/v1/duduribeiro/opensanca_jobs/branches/master/badge.svg)](https://semaphoreci.com/duduribeiro/opensanca_jobs)
 
 # README
 
