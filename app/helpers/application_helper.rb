@@ -8,6 +8,10 @@ module ApplicationHelper
     }[flash_type.to_sym] || flash_type.to_s
   end
 
+  def menu_class(path)
+    current_page?(path) ? "active" : ""
+  end
+
   def error_tag(model, attribute)
     if model.errors.has_key? attribute
       content_tag(
