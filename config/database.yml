@@ -12,5 +12,5 @@ test:
   database: opensanca_jobs_test
 
 production:
-  adapter: postgresql
+  <<: *default
   url: <%= ENV['DATABASE_URL'] %>
