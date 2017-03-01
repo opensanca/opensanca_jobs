@@ -13,4 +13,10 @@ RSpec.feature "Visit index page", type: :feature do
     expect(page).to have_content(vacancy2.job_title)
     expect(page).to have_content(vacancy3.job_title)
   end
+
+  scenario "when does not have any vacancy, display a custom message" do
+    visit root_path
+
+    expect(page).to have_content(I18n.t("vacancies.index.no_vacancies"))
+  end
 end

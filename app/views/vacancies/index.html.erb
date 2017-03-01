@@ -8,7 +8,7 @@
 <section>
   <article>
     <ul class="vacancy-list">
-      <%= render @vacancies %>
+      <%= render(@vacancies) || no_content_message(t(".no_vacancies")) %>
     </ul>
   <article>
 </section>
