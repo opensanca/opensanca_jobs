@@ -1,3 +1,7 @@
 <li class="vacancy-item">
-  <h3><strong><%= vacancy.company_name %></strong> - <%= vacancy.job_title %></h3>
+  <h3>
+    <%= link_to vacancy_path(vacancy) do %>
+      <strong><%= vacancy.company_name %></strong> - <%= vacancy.job_title %>
+    <% end %>
+  </h3>
 </li>
