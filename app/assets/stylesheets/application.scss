@@ -20,7 +20,7 @@ body > div.container {
   }
 }
 
-.no-vacancies {
+.no-content {
   border-top: 1px solid #ccc;
   padding: 1% 0;
 }
@@ -39,9 +39,13 @@ body > div.container {
     }
 
 
-    .vacancy-title {
+    .vacancy-title a {
       color: #2d7788;
       font-size: 25px;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     .vacancy-details {
