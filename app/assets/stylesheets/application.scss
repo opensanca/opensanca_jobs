@@ -1,8 +1,15 @@
 // import bootstrap
 $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 
-body > div.container { margin-top: 4%;
+body {
+  font-family: "Fira Sans";
+  background: rgba(107, 121, 124, 0.61);
+}
+
+body > div.container { 
+  margin-top: 4%;
 }
 
 .field_with_errors {
@@ -19,9 +26,45 @@ body > div.container { margin-top: 4%;
 }
 
 .vacancy-list {
-  padding: 0 0;
-
   .vacancy-item {
-    border-bottom: 1px solid #ccc;
+    max-height: 170px;
+    background: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    margin-bottom: 16px;
+    padding: 15px;
+    box-shadow: 3px 3px 2px rgba(105, 105, 105, 0.28);
+
+    div {
+      margin: 5px 0;
+    }
+
+
+    .vacancy-title {
+      color: #2d7788;
+      font-size: 25px;
+    }
+
+    .vacancy-details {
+      color: #777777;
+      span {
+        font-size: 16px;
+
+        i {
+          margin: 0 5px 0 0;
+        }
+      }
+    }
+
+    .vacancy-description {
+      color: #555;
+    }
   }
+}
+
+.page-title {
+  text-align: center;
+  color: #fff;
+  margin: 45px;
+  font-size: 43px;
+  text-shadow: 3px 3px 2px rgba(105, 105, 105, 0.28);
 }

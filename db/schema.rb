@@ -15,18 +15,18 @@ ActiveRecord::Schema.define(version: 20170222022125) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "vacancies", force: :cascade do |t|
-    t.string   "job_title"
-    t.string   "location"
-    t.text     "description"
-    t.string   "company_name"
-    t.string   "company_url"
-    t.string   "company_email"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["company_email"], name: "index_vacancies_on_company_email", using: :btree
-    t.index ["company_url"], name: "index_vacancies_on_company_url", using: :btree
-    t.index ["location"], name: "index_vacancies_on_location", using: :btree
+  create_table "vacancies", id: :serial, force: :cascade do |t|
+    t.string "job_title"
+    t.string "location"
+    t.text "description"
+    t.string "company_name"
+    t.string "company_url"
+    t.string "company_email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_email"], name: "index_vacancies_on_company_email"
+    t.index ["company_url"], name: "index_vacancies_on_company_url"
+    t.index ["location"], name: "index_vacancies_on_location"
   end
 
 end

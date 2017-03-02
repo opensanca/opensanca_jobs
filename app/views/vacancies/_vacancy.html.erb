@@ -1,3 +1,12 @@
-<li class="vacancy-item">
-  <h3><strong><%= vacancy.company_name %></strong> - <%= vacancy.job_title %></h3>
-</li>
+<section class="vacancy-item">
+  <div class="vacancy-title">
+    <%= vacancy.job_title %> 
+  </div>
+  <div class="vacancy-details">
+    <span><i class="glyphicon glyphicon-briefcase"></i><%= vacancy.company_name %></span> 
+    <span><i class="glyphicon glyphicon-map-marker"></i><%= vacancy.location %></span>
+  </div>
+  <div class="vacancy-description">
+    <%= vacancy.description %>
+  </div>
+</section>
