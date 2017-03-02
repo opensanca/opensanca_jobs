@@ -1,14 +1,9 @@
-<h1><%= t('.title') %></h1>
-
-<div>
-  <%= link_to t('.post_vacancy'), new_vacancy_path, class: 'btn btn-primary' %>
-</div>
-
+<h1 class="page-title"><%= t('.title') %></h1>
 
 <section>
   <article>
-    <ul class="vacancy-list">
+    <div class="vacancy-list">
       <%= render(@vacancies) || no_content_message(t(".no_vacancies")) %>
-    </ul>
+    </div>
   <article>
 </section>
