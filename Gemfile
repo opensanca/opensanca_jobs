@@ -20,6 +20,9 @@ gem "webpacker"
 # Json generation
 gem "jbuilder", "~> 2.5"
 
+# Faker used to seed data (require false)
+gem "faker", require: false
+
 group :development, :test do
   # Code analysis
   gem "brakeman"
@@ -33,7 +36,6 @@ group :development, :test do
 
   # Testing
   gem "capybara"
-  gem "faker"
   gem "factory_girl_rails"
   gem "fuubar"
   gem "rspec-rails"
