@@ -3,13 +3,12 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <div class="vacancy-details">
-      <span><i class="glyphicon glyphicon-briefcase"></i><%= @vacancy.company_name %></span>
-      <span><i class="glyphicon glyphicon-map-marker"></i><%= @vacancy.location %></span>
+      <span><i class="fa fa-briefcase" aria-hidden="true"></i><%= @vacancy.company_name %></span>
+      <span><i class="fa fa-map-marker" aria-hidden="true"></i><%= @vacancy.location %></span>
     </div>
 
     <div class="vacancy-description">
-      <%=  sanitize(@vacancy.description, tags: %w(b strong i em)) %>
+      <%=  sanitize(@vacancy.description) %>
     </div>
   </div>
 </div>
-

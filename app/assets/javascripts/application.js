@@ -11,7 +11,14 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
 //= require jquery
 //= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
+//= require summernote
+//= require turbolinks
 //= require_tree .
+
+$(document).on('turbolinks:load', function() {
+  $('[data-provider="summernote"]').each(function(){
+    $(this).summernote({ height: "400px" });
+  });
+});
