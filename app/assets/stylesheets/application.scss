@@ -13,7 +13,7 @@ body > div.container { margin-top: 4%;
   }
 }
 
-.no-vacancies {
+.no-content {
   border-top: 1px solid #ccc;
   padding: 1% 0;
 }
@@ -24,4 +24,8 @@ body > div.container { margin-top: 4%;
   .vacancy-item {
     border-bottom: 1px solid #ccc;
   }
+}
+
+.vacancy-description {
+  margin-top: 2%;
 }

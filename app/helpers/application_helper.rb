@@ -23,6 +23,6 @@ module ApplicationHelper
   end
 
   def no_content_message(message)
-    content_tag(:div, content_tag(:h3, message, class: 'no-vacancies'))
+    content_tag(:div, content_tag(:h3, message, class: "no-content"))
   end
 end

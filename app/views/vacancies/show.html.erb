@@ -1,0 +1,6 @@
+<h2><%= @vacancy.job_title %></h2>
+<small><%= @vacancy.company_name %> - <%= @vacancy.location %></small>
+
+<div class="vacancy-description">
+  <%=  sanitize(@vacancy.description, tags: %w(b strong i em)) %>
+</div>
