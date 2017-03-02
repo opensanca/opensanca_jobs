@@ -2,7 +2,7 @@
   "name": "opensanca_jobs",
   "description": "",
   "scripts": {
-    "postdeploy": "bundle exec gem install faker && bin/rails db:migrate db:seed"
+    "postdeploy": "bin/rails db:migrate db:seed"
   },
   "env": {
     "SECRET_KEY_BASE": {
