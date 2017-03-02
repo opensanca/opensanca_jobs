@@ -7,6 +7,7 @@ require "spec_helper"
 require "rspec/rails"
 require "capybara/rails"
 require "support/factory_girl"
+require "faker"
 
 ActiveRecord::Migration.maintain_test_schema!
 
