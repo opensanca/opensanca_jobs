@@ -1,0 +1,25 @@
+{
+  "name": "opensanca_jobs",
+  "description": "",
+  "scripts": {
+    "postdeploy": "bin/setup"
+  },
+  "env": {
+    "SECRET_KEY_BASE": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
