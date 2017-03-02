@@ -8,8 +8,7 @@
     </div>
 
     <div class="vacancy-description">
-      <%=  sanitize(@vacancy.description, tags: %w(b strong i em)) %>
+      <%=  sanitize(@vacancy.description) %>
     </div>
   </div>
 </div>
-
