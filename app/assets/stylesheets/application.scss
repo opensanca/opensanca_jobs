@@ -1,6 +1,7 @@
 // import bootstrap
 $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import "summernote";
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 
 body {
@@ -8,7 +9,7 @@ body {
   background: rgba(107, 121, 124, 0.61);
 }
 
-body > div.container { 
+body > div.container {
   margin-top: 4%;
 }
 
