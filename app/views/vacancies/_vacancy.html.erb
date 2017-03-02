@@ -1,11 +1,11 @@
 <section class="vacancy-item">
   <div class="vacancy-title">
     <%= link_to vacancy_path(vacancy) do %>
-      <%= vacancy.job_title %> 
+      <%= vacancy.job_title %>
     <% end %>
   </div>
   <div class="vacancy-details">
-    <span><i class="glyphicon glyphicon-briefcase"></i><%= vacancy.company_name %></span> 
+    <span><i class="glyphicon glyphicon-briefcase"></i><%= vacancy.company_name %></span>
     <span><i class="glyphicon glyphicon-map-marker"></i><%= vacancy.location %></span>
   </div>
   <div class="vacancy-description">
