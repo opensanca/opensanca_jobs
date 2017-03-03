@@ -29,25 +29,32 @@ body > div.container {
 }
 
 .vacancy-list {
+  margin-bottom: 20px;
+
   .vacancy-item {
     max-height: 170px;
     background: #f8f8f8;
-    border: 1px solid #e7e7e7;
-    margin-bottom: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-left: 3px solid #2d7788;
     padding: 15px;
-    box-shadow: 3px 3px 2px rgba(105, 105, 105, 0.28);
 
     div {
       margin: 5px 0;
+      display: inline-block;
     }
 
 
-    .vacancy-title a {
-      color: #2d7788;
-      font-size: 25px;
+    .vacancy-title {
+      margin: 5px 8px 5px 0;
 
-      &:hover {
-        text-decoration: none;
+      a {
+        color: #2d7788;
+        font-size: 30px;
+        text-transform: capitalize;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
 
