@@ -5,9 +5,10 @@ $fa-font-path: "font-awesome/fonts/";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "summernote";
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 body {
-  font-family: "Fira Sans";
+  font-family: "Open Sans", sans-serif;
   background: #f2f2f2;
 }
 
@@ -42,12 +43,13 @@ body > div.container {
   font-size: 2em;
 }
 
-.vertical__35 {
-  margin-top: 35px;
+.vertical__25 {
+  margin-top: 25px;
 }
 
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.1); }
+
 
 .vacancy-list {
   margin-top: 20px;
@@ -60,6 +62,10 @@ body > div.container {
     margin-bottom: 16px;
     border-left: 2px solid #4a8cc4;
     padding: 15px;
+
+    &:hover {
+      box-shadow:10px 6px 11px rgba(136, 136, 136, 0.64);
+    }
 
     div {
       margin: 5px 0;
@@ -76,6 +82,20 @@ body > div.container {
         }
       }
     }
+
+    .show-title-vacancy {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: 500;
+      font-family: "Open Sans";
+    }
+
+    .img-company {
+      margin-top: 10px;
+      border: 1px solid #eee;
+      padding: 3px;
+    }
+
 
 
 
@@ -111,12 +131,18 @@ body > div.container {
   color:#f66c35;
 }
 
+
 .btn-primary {
   background: #05a58a;
   border: transparent;
 }
 
+.btn-primary:hover {
+  background-color:#1f8b79;
+}
+
 .btn-register-vacancy {
+  background-color:#ff6f27;
   width: 300px;
   height: 35px;
   border-radius: 5px;

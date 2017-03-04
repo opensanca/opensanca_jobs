@@ -1,10 +1,13 @@
-<section class="vacancy-item grow">
+<section class="vacancy-item ">
   <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-1">
+      <%= image_tag("ico-company-default.png", class: 'img-responsive img-company') %>
+    </div>
+    <div class="col-md-9">
       <div class="vacancy-title">
-        <%= link_to vacancy_path(vacancy) do %>
+        <span class="text-primary show-title-vacancy">
           <%= vacancy.job_title %>
-        <% end %>
+        </span>
       </div>
       <div class="vacancy-details">
         <span><i class="fa fa-briefcase" aria-hidden="true"></i><%= vacancy.company_name %></span>
@@ -12,7 +15,7 @@
       </div>
     </div>
     <div class="col-md-2">
-        <button type="button" name="button" class="btn btn-primary vertical__35">Apply for job</button>
+      <%= link_to "Apply for job", vacancy_path(vacancy), class: "btn btn-primary vertical__25 grow" %>
     </div>
   </div>
 </section>
