@@ -22,4 +22,10 @@ RSpec.describe Vacancy, type: :model do
     it { is_expected.to allow_value('opensanca.com.br').for(:company_url) }
     it { is_expected.not_to allow_value('invalid').for(:company_url) }
   end
+
+  it 'insert http in company_url before create' do
+    vacancy = Vacancy.new attributes_for(:vacancy, company_url: "opensanca.com.br")
+    vacancy.valid?
+    expect(vacancy.company_url).to eq("http://opensanca.com.br")
+  end
 end
