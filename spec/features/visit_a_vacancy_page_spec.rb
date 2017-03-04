@@ -6,7 +6,7 @@ RSpec.feature "Visit a vacancy page", type: :feature do
 
     visit root_path
 
-    click_link "#{vacancy.job_title}"
+    click_link "Apply for job"
 
     expect(current_path).to eql(vacancy_path(vacancy))
 
