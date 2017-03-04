@@ -6,7 +6,7 @@ class Vacancy < ApplicationRecord
 
   before_validation do
     unless self.company_url.nil? || self.company_url[0, 4] == "http"
-      self.company_url = "http://#{self.company_url}" 
+      self.company_url = "http://#{self.company_url}"
     end
   end
 end
