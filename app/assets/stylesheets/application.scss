@@ -8,7 +8,7 @@ $fa-font-path: "font-awesome/fonts/";
 
 body {
   font-family: "Fira Sans";
-  background: rgba(107, 121, 124, 0.61);
+  background: #f2f2f2;
 }
 
 body > div.container {
@@ -28,17 +28,38 @@ body > div.container {
   padding: 1% 0;
 }
 
+.bg-vacancy-intro {
+    background: url(asset-path('bg-intro-vacancy3.jpg')) no-repeat center center;
+    min-height: 45vh;
+    padding: 10px;
+    background-size: cover;
+}
+
+.bg-vacancy-intro h1 {
+  padding-top: 75px;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 2em;
+}
+
+.vertical__35 {
+  margin-top: 35px;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
 .vacancy-list {
+  margin-top: 20px;
   margin-bottom: 20px;
 
   .vacancy-item {
     max-height: 170px;
-    background: #f8f8f8;
-    border: 1px solid #e7e7e7;
+    background: #fff;
+    border: 1px solid #ddd;
     margin-bottom: 16px;
-    border-left: 3px solid #2d7788;
+    border-left: 2px solid #4a8cc4;
     padding: 15px;
-    box-shadow: 3px 3px 2px rgba(105, 105, 105, 0.28);
 
     div {
       margin: 5px 0;
@@ -46,8 +67,8 @@ body > div.container {
 
     .vacancy-title {
       a {
-        color: #2d7788;
-        font-size: 30px;
+        color: #3088b8;
+        font-size: 1.5em;
         text-transform: capitalize;
 
         &:hover {
@@ -55,6 +76,8 @@ body > div.container {
         }
       }
     }
+
+
 
     .vacancy-details {
       color: #777777;
@@ -82,4 +105,19 @@ body > div.container {
   margin: 45px;
   font-size: 43px;
   text-shadow: 3px 3px 2px rgba(105, 105, 105, 0.28);
+}
+
+.brand-name {
+  color:#f66c35;
+}
+
+.btn-primary {
+  background: #05a58a;
+  border: transparent;
+}
+
+.btn-register-vacancy {
+  width: 300px;
+  height: 35px;
+  border-radius: 5px;
 }

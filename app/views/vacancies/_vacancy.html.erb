@@ -1,11 +1,23 @@
-<section class="vacancy-item">
-  <div class="vacancy-title">
-    <%= link_to vacancy_path(vacancy) do %>
-      <%= vacancy.job_title %>
-    <% end %>
+
+
+<section class="vacancy-item grow">
+  <div class="row">
+    <div class="col-md-10">
+      <div class="vacancy-title">
+        <%= link_to vacancy_path(vacancy) do %>
+          <%= vacancy.job_title %>
+        <% end %>
+      </div>
+      <div class="vacancy-details">
+        <span><i class="fa fa-briefcase" aria-hidden="true"></i><%= vacancy.company_name %></span>
+        <span><i class="fa fa-map-marker" aria-hidden="true"></i><%= vacancy.location %></span>
+      </div>
+    </div>
+    <div class="col-md-2">
+
+        <button type="button" name="button" class="btn btn-primary vertical__35">Apply for job</button>
+    </div>
+
   </div>
-  <div class="vacancy-details">
-    <span><i class="fa fa-briefcase" aria-hidden="true"></i><%= vacancy.company_name %></span>
-    <span><i class="fa fa-map-marker" aria-hidden="true"></i><%= vacancy.location %></span>
-  </div>
+
 </section>
