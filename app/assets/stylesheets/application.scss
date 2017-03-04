@@ -132,13 +132,26 @@ body > div.container {
 }
 
 
+
 .btn-primary {
   background: #05a58a;
   border: transparent;
+
+  &.btn-primary:focus, .btn-primary.focus {
+    color: #fff;
+    background-color: #1f8b79;
+    border-color: #1f8b79;
+  }
+}
+
+.btn-border-bottom__primary {
+    border-radius: 0;
+    border-bottom: 5px solid #1f8b79;
 }
 
 .btn-primary:hover {
   background-color:#1f8b79;
+  border-bottom: 5px solid #1f8b79;
 }
 
 .btn-register-vacancy {
