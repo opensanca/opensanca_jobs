@@ -1,5 +1,6 @@
 class Vacancy < ApplicationRecord
-  validates :job_title, :location, :description, :company_name, :company_url, :company_email, presence: true
+  validates :job_title, :location, :description, :how_to_apply, :company_name, :company_url, :company_email,
+            presence: true
 
   validates :company_email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
   validates :company_url, format: { with: /\A^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$\Z/ix }
