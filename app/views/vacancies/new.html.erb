@@ -37,7 +37,7 @@
 
         <div class="form-group">
           <%= f.label :company_url, t('.company_url') %>
-          <%= f.url_field :company_url, class: 'form-control' %>
+          <%= f.text_field :company_url, class: 'form-control' %>
           <%= error_tag @vacancy, :company_url %>
         </div>
 
