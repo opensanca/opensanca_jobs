@@ -53,7 +53,6 @@ body {
   margin-bottom: 20px;
 
   .vacancy-item {
-    max-height: 170px;
     background: #fff;
     border: 1px solid #ddd;
     margin-bottom: 16px;
@@ -93,9 +92,6 @@ body {
       padding: 3px;
     }
 
-
-
-
     .vacancy-details {
       color: #777777;
       span {
@@ -128,8 +124,6 @@ body {
   color:#f66c35;
 }
 
-
-
 .btn-primary {
   background: #05a58a;
   border: transparent;
@@ -156,4 +150,10 @@ body {
   width: 300px;
   height: 35px;
   border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .vertical__25 {
+    margin-top: 0;
+  }
 }

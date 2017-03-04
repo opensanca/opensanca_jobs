@@ -1,6 +1,6 @@
 <section class="vacancy-item ">
   <div class="row">
-    <div class="col-md-1 col-xs-2">
+    <div class="col-md-1 col-xs-5">
       <%= image_tag("ico-company-default.png", class: 'img-responsive img-company') %>
     </div>
     <div class="col-md-9 col-xs-6">
@@ -14,7 +14,7 @@
         <span><i class="fa fa-map-marker" aria-hidden="true"></i><%= vacancy.location %></span>
       </div>
     </div>
-    <div class="col-md-2 col-xs2">
+    <div class="col-md-2 col-xs-12">
       <%= link_to "Apply for job", vacancy_path(vacancy), class: "btn btn-primary btn-border-bottom__primary vertical__25 grow" %>
     </div>
   </div>
