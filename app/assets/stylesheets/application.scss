@@ -5,14 +5,12 @@ $fa-font-path: "font-awesome/fonts/";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "summernote";
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 body {
-  font-family: "Fira Sans";
-  background: rgba(107, 121, 124, 0.61);
-}
-
-body > div.container {
-  margin-top: 4%;
+  font-family: "Open Sans", sans-serif;
+  background: #f2f2f2;
+  padding-top: 50px;
 }
 
 .field_with_errors {
@@ -28,17 +26,42 @@ body > div.container {
   padding: 1% 0;
 }
 
+.bg-vacancy-intro {
+    background: url(asset-path('bg-intro-vacancy3.jpg')) no-repeat center center;
+    min-height: 45vh;
+    padding: 10px;
+    background-size: cover;
+}
+
+.bg-vacancy-intro h1 {
+  padding-top: 75px;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 2em;
+}
+
+.vertical__25 {
+  margin-top: 25px;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+
 .vacancy-list {
+  margin-top: 20px;
   margin-bottom: 20px;
 
   .vacancy-item {
-    max-height: 170px;
-    background: #f8f8f8;
-    border: 1px solid #e7e7e7;
+    background: #fff;
+    border: 1px solid #ddd;
     margin-bottom: 16px;
-    border-left: 3px solid #2d7788;
+    border-left: 2px solid #4a8cc4;
     padding: 15px;
-    box-shadow: 3px 3px 2px rgba(105, 105, 105, 0.28);
+
+    &:hover {
+      box-shadow:10px 6px 11px rgba(136, 136, 136, 0.64);
+    }
 
     div {
       margin: 5px 0;
@@ -46,14 +69,27 @@ body > div.container {
 
     .vacancy-title {
       a {
-        color: #2d7788;
-        font-size: 30px;
+        color: #3088b8;
+        font-size: 1.5em;
         text-transform: capitalize;
 
         &:hover {
           text-decoration: none;
         }
       }
+    }
+
+    .show-title-vacancy {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: 500;
+      font-family: "Open Sans";
+    }
+
+    .img-company {
+      margin-top: 10px;
+      border: 1px solid #eee;
+      padding: 3px;
     }
 
     .vacancy-details {
@@ -82,4 +118,42 @@ body > div.container {
   margin: 45px;
   font-size: 43px;
   text-shadow: 3px 3px 2px rgba(105, 105, 105, 0.28);
+}
+
+.brand-name {
+  color:#f66c35;
+}
+
+.btn-primary {
+  background: #05a58a;
+  border: transparent;
+
+  &.btn-primary:focus, .btn-primary.focus {
+    color: #fff;
+    background-color: #1f8b79;
+    border-color: #1f8b79;
+  }
+}
+
+.btn-border-bottom__primary {
+    border-radius: 0;
+    border-bottom: 5px solid #1f8b79;
+}
+
+.btn-primary:hover {
+  background-color:#1f8b79;
+  border-bottom: 5px solid #1f8b79;
+}
+
+.btn-register-vacancy {
+  background-color:#ff6f27;
+  width: 300px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .vertical__25 {
+    margin-top: 0;
+  }
 }

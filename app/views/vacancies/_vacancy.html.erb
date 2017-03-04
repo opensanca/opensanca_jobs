@@ -1,11 +1,21 @@
-<section class="vacancy-item">
-  <div class="vacancy-title">
-    <%= link_to vacancy_path(vacancy) do %>
-      <%= vacancy.job_title %>
-    <% end %>
-  </div>
-  <div class="vacancy-details">
-    <span><i class="fa fa-briefcase" aria-hidden="true"></i><%= vacancy.company_name %></span>
-    <span><i class="fa fa-map-marker" aria-hidden="true"></i><%= vacancy.location %></span>
+<section class="vacancy-item ">
+  <div class="row">
+    <div class="col-md-1 col-xs-5">
+      <%= image_tag("ico-company-default.png", class: 'img-responsive img-company') %>
+    </div>
+    <div class="col-md-9 col-xs-6">
+      <div class="vacancy-title">
+        <span class="text-primary show-title-vacancy">
+          <%= vacancy.job_title %>
+        </span>
+      </div>
+      <div class="vacancy-details">
+        <span><i class="fa fa-briefcase" aria-hidden="true"></i><%= vacancy.company_name %></span>
+        <span><i class="fa fa-map-marker" aria-hidden="true"></i><%= vacancy.location %></span>
+      </div>
+    </div>
+    <div class="col-md-2 col-xs-12">
+      <%= link_to "Apply for job", vacancy_path(vacancy), class: "btn btn-primary btn-border-bottom__primary vertical__25 grow" %>
+    </div>
   </div>
 </section>
