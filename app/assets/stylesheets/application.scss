@@ -164,35 +164,32 @@ body {
 }
 
 
-.box-share__vacancy{
-  height: 155px;
+.box-share__vacancy {
   border-left: 1px solid #cbcaca;
+  height: 155px;
   padding-left: 15px;
-
-  & h4 {
+    h4 {
       font-size: 1.8rem;
       color: #f66c41;
     }
 }
 .report__vacancy > tbody > tr > td {
-   padding: 0;
-   line-height: 1.42857;
-   vertical-align: middle;
-   border-top: 1px solid transparent;
+  padding: 0;
+  line-height: 1.42857;
+  vertical-align: middle;
+  border-top: 1px solid transparent;
 }
 
 .describe-vacancy {
   background-color: #fff;
-  padding: 10px;
   margin-top: 10px;
+  padding: 10px;
 }
 
 .describe-img-company {
   border: 1px solid #eee;
   padding: 3px;
 }
-
-
 
 @media (max-width: 768px) {
   .vertical__25 {
