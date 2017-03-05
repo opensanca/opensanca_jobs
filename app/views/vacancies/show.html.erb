@@ -1,7 +1,163 @@
-<h1 class="page-title"><%= @vacancy.job_title %></h1>
+<!--<h1 class="page-title"><%= @vacancy.job_title %></h1>-->
+
+
+<section class="view-vacancy">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-2">
+          <%= image_tag("ico-company-default.png", class: 'img-responsive describe-img-company vertical__25') %>
+        </div>
+
+        <div class="col-md-6">
+          <h1 class="job-title__view"> Front-end Developer</h1>
+            <table class="table report__vacancy">
+              <tr>
+                <td><span class="vacancy-describe__itens"> <i class="fa fa-briefcase" aria-hidden="true"></i></span></td>
+                <td><%= @vacancy.company_name %></td>
+                <td>http://www.xpto.com/</td>
+              </tr>
+
+              <tr>
+                <td><span class="vacancy-describe__itens"> <i class="fa fa-map-marker" aria-hidden="true"></i></span></td>
+                <td><%= @vacancy.location %></td>
+                <td> CLT - Remote</td>
+              </tr>
+
+              <tr>
+                <td><span class="vacancy-describe__itens"> <i class="fa fa-calendar" aria-hidden="true"></i> </span></td>
+                <td>20 days <mark>ago</mark></td>
+              </tr>
+
+          </table>
+        </div>
+
+        <div class="col-md-2">
+            <button type="button" name="button" class="btn btn-primary btn-border-bottom__primary vertical__25 grow">
+               <i class="fa fa-trophy" aria-hidden="true"></i> Apply for Job </button>
+            <br> <br>
+        </div>
+      </div> <!--/row-->
+    </div><!--/col-md-9-->
+    <div class="col-md-3">
+      <div class="box-share__vacancy">
+        <h4> <i class="fa fa-rocket" aria-hidden="true"></i> Recommend this vacancy</h4>
+          <p> You can help your friends find good opportunities!</p>
+          <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i> </a>
+          <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i> </a>
+
+        </div>
+
+        <div class="box__vacancySimilar">
+        </div>
+  </div><!--/col-md-3-->
+</div>
+</section>
+
+<section class="describe-vacancy">
+  <div class="row">
+    <div class="col-md-6">
+
+      <h3>Job Description</h3>
+      <hr>
+
+      <p class="text-justify">
+        Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá. Ta deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.” Sapien in monti palavris qui num significa nadis i pareci latim. Quem manda na minha terra sou Euzis!
+        <br><br>
+        Cevadis im ampola pa arma uma pindureta. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Interagi no mé, cursus quis, vehicula ac nisi. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.
+        <br><br>
+        Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Viva Forevis aptent taciti sociosqu ad litora torquent Detraxit consequat et quo num tendi nada. Mais vale um bebadis conhecidiss, que um alcoolatra anonimiss.
+      </p>
+    </div>
+
+    <div class="col-md-6">
+          <h3>About the company</h3>
+          <hr>
+
+          <p class="text-justify">
+            Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá. Ta deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.” Sapien in monti palavris qui num significa nadis i pareci latim. Quem manda na minha terra sou Euzis!
+            <br><br>
+            Cevadis im ampola pa arma uma pindureta. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Interagi no mé, cursus quis, vehicula ac nisi. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.
+            <br><br>
+            Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Viva Forevis aptent taciti sociosqu ad litora torquent Detraxit consequat et quo num tendi nada. Mais vale um bebadis conhecidiss, que um alcoolatra anonimiss.
+          </p>
+
+        </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Prerequisites</h3>
+       <hr>
+
+       <span class="label label-default">HTML5</span>
+       <span class="label label-default">CSS3</span>
+       <span class="label label-default">JAVASCRIPT</span>
+       <span class="label label-default">JQUERY</span>
+       <span class="label label-default">AJAX</span>
+       <span class="label label-default">JSON</span>
+       <span class="label label-default">SASS</span>
+       <span class="label label-default">ANGULAR</span>
+       <span class="label label-default">SCRUM</span>
+     </div>
+
+     <div class="col-md-6">
+       <h3>Benefits</h3>
+        <hr>
+        <table class="table report__vacancy">
+          <tr>
+            <td class="text-center"><span class="vacancy-describe__itens"> <i class="fa fa-usd" aria-hidden="true"></i></span></td>
+            <td>PLR</td>
+          </tr>
+
+          <tr>
+            <td class="text-center"><span class="vacancy-describe__itens"><i class="fa fa-user-md" aria-hidden="true"></i> </span></td>
+            <td>Health Care</td>
+
+          </tr>
+
+          <tr>
+            <td class="text-center"><span class="vacancy-describe__itens"> <i class="fa fa-cutlery" aria-hidden="true"></i> </span></td>
+            <td>Food stamps</td>
+          </tr>
+
+          <tr>
+            <td class="text-center"><span class="vacancy-describe__itens">   <i class="fa fa-road" aria-hidden="true"></i></span></td>
+            <td>Transportation vouchers</td>
+          </tr>
+
+          <tr>
+            <td class="text-center"><span class="vacancy-describe__itens"> <i class="fa fa-child" aria-hidden="true"></i> </span></td>
+            <td>Child Care</td>
+          </tr>
+
+          <tr>
+            <td class="text-center"><span class="vacancy-describe__itens"> <i class="fa fa-heartbeat" aria-hidden="true"></i></span></td>
+            <td>Gymnastics bodybuilding</td>
+          </tr>
 
 
 
+      </table>
+
+    </div>
+  </div>
+</section>
+
+<section class="describe-vacancy">
+  <div class="row">
+    <div class="col-md-12">
+
+
+  </div>
+
+
+
+
+
+
+<!--
 <div class="panel panel-default">
   <div class="panel-body">
     <div class="vacancy-details">
@@ -14,3 +170,5 @@
     </div>
   </div>
 </div>
+
+-->
