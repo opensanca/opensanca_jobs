@@ -11,8 +11,9 @@ RSpec.feature "Visit a vacancy page", type: :feature do
     expect(current_path).to eql(vacancy_path(vacancy))
 
     expect(page).to have_content(vacancy.job_title)
-    expect(page).to have_content(vacancy.company_name)
     expect(page).to have_content(vacancy.location)
+    expect(page).to have_content(vacancy.company_name)
     expect(page).to have_content(vacancy.description)
+    expect(page).to have_content(vacancy.how_to_apply)
   end
 end

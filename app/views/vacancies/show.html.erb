@@ -166,7 +166,15 @@
     </div>
 
     <div class="vacancy-description">
-      <%=  sanitize(@vacancy.description) %>
+      <%= sanitize(@vacancy.description) %>
+    </div>
+
+    <br>
+
+    <h3><%= t('.how_to_apply') %></h3>
+
+    <div class="vacancy-how-to-apply">
+      <%= @vacancy.how_to_apply %>
     </div>
   </div>
 </div>

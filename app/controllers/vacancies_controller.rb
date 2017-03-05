@@ -24,6 +24,7 @@ class VacanciesController < ApplicationController
   private
 
   def vacancy_params
-    params.require(:vacancy).permit(:job_title, :location, :description, :company_name, :company_url, :company_email)
+    params.require(:vacancy).permit(:job_title, :location, :description, :how_to_apply, :company_name, :company_url,
+                                    :company_email)
   end
 end
