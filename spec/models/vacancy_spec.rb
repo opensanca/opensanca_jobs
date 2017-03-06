@@ -30,19 +30,30 @@ RSpec.describe Vacancy, type: :model do
     expect(vacancy.company_url).to eq("http://opensanca.com.br")
   end
 
-  context '.search' do
-    it 'returns all vacancies' do
-      vacancies = create_list(:vacancy, 5)
+  describe '.search' do
+    context 'without parameter' do
+      it 'returns all vacancies' do
+        vacancies = create_list(:vacancy, 5)
 
-      expect(Vacancy.search).to eq vacancies
+        expect(Vacancy.search).to eq vacancies
+      end
     end
 
-    it 'returns selected results' do
-      vacancy_one = create(:vacancy, job_title: 'java programmer')
-      vacancy_two = create(:vacancy, job_title: 'java developer')
-      create(:vacancy, job_title: 'ruby engineer')
+    context 'with parameter' do
+      it 'returns selected results' do
+        vacancy_one = create(:vacancy, job_title: 'java programmer')
+        create(:vacancy, job_title: 'ruby developer')
 
-      expect(Vacancy.search('programmers java')).to eq([vacancy_one, vacancy_two])
+        expect(Vacancy.search('programmers java')).to eq([vacancy_one])
+      end
+
+      it 'returns results that contains search param' do
+        vacancy_one = create(:vacancy, job_title: 'ruby developer')
+        create(:vacancy, job_title: 'java programmer')
+
+        expect(Vacancy.search('dev ruby')).to eq([vacancy_one])
+
+      end
     end
   end
 end
