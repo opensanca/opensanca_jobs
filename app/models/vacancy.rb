@@ -36,7 +36,7 @@ class Vacancy < ApplicationRecord
           to_tsvector('#{lang}', job_title) || ' ' ||
           to_tsvector('#{lang}', description) as document
         from vacancies) vacancies
-      where 
+      where
         vacancies.document @@ to_tsquery('#{lang}', ?)
     }
 
