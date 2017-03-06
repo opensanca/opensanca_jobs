@@ -158,9 +158,25 @@ body {
   margin-top: 10px;
 }
 
+.job-title-view {
+  color: #f66c41;
+  text-transform: uppercase;
+  font-family: "Fira Sans", sans-serif;
+}
+
 .vacancy-describe-itens {
   color: #cbcaca;
   font-size: 1.6rem;
+}
+
+.question-apply {
+  background: rgba(176, 217, 234, 0.13);
+  padding: 10px
+}
+
+.btn-hint {
+  font-size: .8em;
+  color: #f66c41;
 }
 
 
