@@ -29,4 +29,20 @@ RSpec.describe Vacancy, type: :model do
     vacancy.valid?
     expect(vacancy.company_url).to eq("http://opensanca.com.br")
   end
+
+  context '.search' do
+    it 'returns all vacancies' do
+      vacancies = create_list(:vacancy, 5)
+
+      expect(Vacancy.search).to eq vacancies
+    end
+
+    it 'returns selected results' do
+      vacancy_one = create(:vacancy, job_title: 'java programmer')
+      vacancy_two = create(:vacancy, job_title: 'java developer')
+      create(:vacancy, job_title: 'ruby engineer')
+
+      expect(Vacancy.search('programmers java')).to eq([vacancy_one, vacancy_two])
+    end
+  end
 end
