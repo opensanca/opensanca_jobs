@@ -10,7 +10,7 @@
         </div>
 
         <div class="col-md-6">
-          <h1 class="job-title-view"> Front-end Developer</h1>
+          <h1 class="job-title-view"><%= @vacancy.job_title %></h1></h1>
             <table class="table report-vacancy">
               <tr>
                 <td><span class="vacancy-describe-itens"> <i class="fa fa-briefcase" aria-hidden="true"></i></span></td>
@@ -34,7 +34,7 @@
 
         <div class="col-md-2">
             <button type="button" name="button" class="btn btn-primary btn-border-bottom-primary vertical-25 grow">
-               <i class="fa fa-trophy" aria-hidden="true"></i> Apply for Job </button>
+               <i class="fa fa-trophy" aria-hidden="true"></i> Apply for Job  <%= @vacancy.how_to_apply %> </button>
             <br> <br>
         </div>
       </div> <!--/row-->
@@ -63,11 +63,7 @@
       <hr>
 
       <p class="text-justify">
-        Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá. Ta deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.” Sapien in monti palavris qui num significa nadis i pareci latim. Quem manda na minha terra sou Euzis!
-        <br><br>
-        Cevadis im ampola pa arma uma pindureta. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Interagi no mé, cursus quis, vehicula ac nisi. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.
-        <br><br>
-        Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Viva Forevis aptent taciti sociosqu ad litora torquent Detraxit consequat et quo num tendi nada. Mais vale um bebadis conhecidiss, que um alcoolatra anonimiss.
+        <%= sanitize(@vacancy.description) %>
       </p>
     </div>
 
@@ -127,45 +123,7 @@
   </div>
 </section>
 
-<!--
-<footer>
-  <div class="row">
-      <div class="col-md-4">
-        <ul class="list-inline banner-social-buttons">
 
-          <h4>Follow US:</h4>
-                    <li>
-                        <a href="https://twitter.com/opensanca" class="btn btn-default" target="_blank"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/orgs/opensanca" class="btn btn-default" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/groups/398166953717267/" class="btn btn-default" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                    </li>
-                </ul>
-              </div>
-
-    <div class="col-md-4">
-      <ul class="list-unstyled">
-        <li><a href="#">Como Funciona</a></li>
-        <li><a href="#">Quem Somos</a></li>
-        <li><a href="#">Contato</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Termos de Politica e Privacidade</a></li>
-      </ul>
-
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <hr>
-      <p class="text-center"> OpenJobs |  2017 by <a href="www.opensanca.com.br">Opensanca</a></p>
-    </div>
-
-  </div>
-</footer>
 <!--
 <div class="panel panel-default">
   <div class="panel-body">
