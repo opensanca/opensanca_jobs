@@ -40,7 +40,7 @@ body {
   font-size: 2em;
 }
 
-.vertical__25 {
+.vertical-25 {
   margin-top: 25px;
 }
 
@@ -135,7 +135,7 @@ body {
   }
 }
 
-.btn-border-bottom__primary {
+.btn-border-bottom-primary {
     border-radius: 0;
     border-bottom: 5px solid #1f8b79;
 }
@@ -158,13 +158,13 @@ body {
   margin-top: 10px;
 }
 
-.vacancy-describe__itens {
+.vacancy-describe-itens {
   color: #cbcaca;
   font-size: 1.6rem;
 }
 
 
-.box-share__vacancy {
+.box-share-vacancy {
   border-left: 1px solid #cbcaca;
   height: 155px;
   padding-left: 15px;
@@ -173,7 +173,7 @@ body {
       color: #f66c41;
     }
 }
-.report__vacancy > tbody > tr > td {
+.report-vacancy > tbody > tr > td {
   padding: 0;
   line-height: 1.42857;
   vertical-align: middle;
@@ -191,8 +191,14 @@ body {
   padding: 3px;
 }
 
+footer {
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+}
+
 @media (max-width: 768px) {
-  .vertical__25 {
+  .vertical-25 {
     margin-top: 0;
   }
 }
