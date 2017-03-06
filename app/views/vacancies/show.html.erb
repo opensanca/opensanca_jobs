@@ -1,7 +1,102 @@
-<h1 class="page-title"><%= @vacancy.job_title %></h1>
+<!--<h1 class="page-title"><%= @vacancy.job_title %></h1>-->
 
 
+<section class="view-vacancy">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-2">
+          <%= image_tag("ico-company-default.png", class: 'img-responsive describe-img-company vertical-25') %>
+        </div>
 
+        <div class="col-md-6">
+          <h1 class="job-title-view"><%= @vacancy.job_title %></h1></h1>
+            <table class="table report-vacancy">
+              <tr>
+                <td><span class="vacancy-describe-itens"> <i class="fa fa-briefcase" aria-hidden="true"></i></span></td>
+                <td><%= @vacancy.company_name %></td>
+                <td>http://www.xpto.com/</td>
+              </tr>
+
+              <tr>
+                <td><span class="vacancy-describe-itens"> <i class="fa fa-map-marker" aria-hidden="true"></i></span></td>
+                <td><%= @vacancy.location %></td>
+                <td> CLT - Remote</td>
+              </tr>
+
+              <tr>
+                <td><span class="vacancy-describe-itens"> <i class="fa fa-calendar" aria-hidden="true"></i> </span></td>
+                <td>20 days <mark>ago</mark></td>
+              </tr>
+
+          </table>
+        </div>
+
+        <div class="col-md-2">
+            <button type="button" name="button" class="btn btn-primary btn-border-bottom-primary vertical-25 grow">
+               <i class="fa fa-trophy" aria-hidden="true"></i> Apply for Job</button>
+            <br> <br>
+        </div>
+      </div> <!--/row-->
+    </div><!--/col-md-9-->
+    <div class="col-md-3">
+      <div class="box-share-vacancy">
+        <h4> <i class="fa fa-rocket" aria-hidden="true"></i> Recommend this vacancy</h4>
+          <p> You can help your friends find good opportunities!</p>
+          <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i> </a>
+          <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i> </a>
+
+        </div>
+
+        <div class="box-vacancySimilar">
+        </div>
+  </div><!--/col-md-3-->
+</div>
+</section>
+
+<section class="describe-vacancy">
+  <div class="row">
+    <div class="col-md-12">
+
+    <h3>Job Description</h3>
+      <hr>
+    <p class="text-justify">
+      <%= sanitize(@vacancy.description) %>
+    </p>
+
+    <h3> How to apply
+        <a class="btn-hint" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+       </a>
+    </h3>
+      <hr>
+    <div class="collapse" id="collapseExample">
+      <div class="question-apply">
+         <h5></h5>
+         <ol>
+           <li>  Find a job, research the requirements, and ensure that you meet them.</li>
+           <li>  Write a resume and cover letter.</li>
+           <li>  Get some references from past employers.</li>
+           <li>  Apply for the job in person, online, or by mail.</li>
+           <li>  Contact the hiring manager after the one week after applying. </li>
+         </ol>
+      </div>
+    </div>
+    <p class="text-jusify">
+    <%= @vacancy.how_to_apply %>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    </div>
+  </div>
+</section>
+
+
+<!--
 <div class="panel panel-default">
   <div class="panel-body">
     <div class="vacancy-details">
@@ -22,3 +117,5 @@
     </div>
   </div>
 </div>
+
+-->

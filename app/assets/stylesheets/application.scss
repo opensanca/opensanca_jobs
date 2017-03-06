@@ -40,7 +40,7 @@ body {
   font-size: 2em;
 }
 
-.vertical__25 {
+.vertical-25 {
   margin-top: 25px;
 }
 
@@ -135,7 +135,7 @@ body {
   }
 }
 
-.btn-border-bottom__primary {
+.btn-border-bottom-primary {
     border-radius: 0;
     border-bottom: 5px solid #1f8b79;
 }
@@ -152,8 +152,69 @@ body {
   border-radius: 5px;
 }
 
+.view-vacancy {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.job-title-view {
+  color: #f66c41;
+  text-transform: uppercase;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.vacancy-describe-itens {
+  color: #cbcaca;
+  font-size: 1.6rem;
+}
+
+.question-apply {
+  background: rgba(176, 217, 234, 0.13);
+  padding: 10px
+}
+
+.btn-hint {
+  font-size: .8em;
+  color: #f66c41;
+}
+
+
+.box-share-vacancy {
+  border-left: 1px solid #cbcaca;
+  height: 155px;
+  padding-left: 15px;
+    h4 {
+      font-size: 1.8rem;
+      color: #f66c41;
+    }
+}
+.report-vacancy > tbody > tr > td {
+  padding: 0;
+  line-height: 1.42857;
+  vertical-align: middle;
+  border-top: 1px solid transparent;
+}
+
+.describe-vacancy {
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.describe-img-company {
+  border: 1px solid #eee;
+  padding: 3px;
+}
+
+footer {
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+}
+
 @media (max-width: 768px) {
-  .vertical__25 {
+  .vertical-25 {
     margin-top: 0;
   }
 }
