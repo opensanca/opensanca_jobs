@@ -4,10 +4,14 @@ en:
       post_vacancy: 'Post a new Vacancy'
       title:        'All Vacancies'
       no_vacancies: 'Sorry, no vacancies posted 😔'
+    show:
+      how_to_apply: 'How to apply'
     new:
       job_title:     'Job Title'
       location:      'Location'
       description:   'Description'
+      how_to_apply:  'How do candidates apply to the vacancy?'
+
       company_name:  'Name'
       company_url:   'URL'
       company_email: 'E-mail'

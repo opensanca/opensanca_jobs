@@ -6,9 +6,10 @@ RSpec.feature "User register a Vacancy" do
 
     click_link I18n.t("vacancies.index.post_vacancy")
 
-    fill_in I18n.t("vacancies.new.job_title"),   with: "Stormtrooper"
-    fill_in I18n.t("vacancies.new.location"),    with: "Death Star"
-    fill_in I18n.t("vacancies.new.description"), with: "You will handle the security of the Death Star. You do not need to be a good shooter"
+    fill_in I18n.t("vacancies.new.job_title"),    with: "Stormtrooper"
+    fill_in I18n.t("vacancies.new.location"),     with: "Death Star"
+    fill_in I18n.t("vacancies.new.description"),  with: "You will handle the security of the Death Star. You do not need to be a good shooter"
+    fill_in I18n.t("vacancies.new.how_to_apply"), with: "Send an email to hr@theempire.com with your CV and a cover letter."
 
     within("#company-details") do
       fill_in "Name",   with: "The Empire"
