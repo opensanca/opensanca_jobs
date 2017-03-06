@@ -1,10 +1,9 @@
 $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
-$fa-font-path: "font-awesome/fonts/";
 
-@import "font-awesome/scss/font-awesome";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "summernote";
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 body {
@@ -161,7 +160,7 @@ body {
 .job-title-view {
   color: #f66c41;
   text-transform: uppercase;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .vacancy-describe-itens {

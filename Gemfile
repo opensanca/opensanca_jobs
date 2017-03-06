@@ -10,6 +10,7 @@ gem "puma", "~> 3.7"
 
 # Assets
 gem "coffee-rails", "~> 4.2"
+gem "font-awesome-sass"
 gem "jquery-rails"
 gem "sass-rails", github: "rails/sass-rails"
 gem "sprockets-commoner"
