@@ -1,4 +1,3 @@
-require "rails_helper"
 
 RSpec.describe Vacancy, type: :model do
   it { is_expected.to validate_presence_of(:job_title) }
@@ -52,7 +51,6 @@ RSpec.describe Vacancy, type: :model do
         create(:vacancy, job_title: 'java programmer')
 
         expect(Vacancy.search('dev ruby')).to eq([vacancy_one])
-
       end
     end
   end
