@@ -8,38 +8,38 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to root_path, class: "navbar-brand" do %>
-          Open<span class="brand-name">Jobs</span>
-        <% end %>
+        Open<span class="brand-name">Jobs</span>
+      <% end %>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="<%= menu_class(root_path) %>"><%= link_to "All Vacancies", root_path %></li>
         <li><%= link_to t('vacancies.index.post_vacancy'), new_vacancy_path %></li>
-			</ul>
+      </ul>
 
-			<%= form_tag vacancies_path, class: "navbar-form navbar-left", method: :get do %>
-				<div class="input-group">
+      <%= form_tag vacancies_path, class: "navbar-form navbar-left", method: :get do %>
+        <div class="input-group">
           <%= text_field_tag 'search', nil, class: 'form-control', placeholder: 'Search' %>
 
-					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit">
-							<i class="fa fa-search"></i>
-						</button>
-					</div>
-				</div>
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
       <% end %>
 
-      <!-- <ul class="nav navbar-nav navbar-right navbar-settings">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <span class="glyphicon glyphicon-cog" title="Settings" />
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Option 1</a></li>
-          </ul>
-        </li>
-      </ul> -->
+      <!-- <ul class="nav navbar&#45;nav navbar&#45;right navbar&#45;settings"> -->
+      <!--   <li class="dropdown"> -->
+      <!--     <a href="#" class="dropdown&#45;toggle" data&#45;toggle="dropdown"> -->
+      <!--       <span class="glyphicon glyphicon&#45;cog" title="Settings" /> -->
+      <!--     </a> -->
+      <!--     <ul class="dropdown&#45;menu"> -->
+      <!--       <li><a href="#">Option 1</a></li> -->
+      <!--     </ul> -->
+      <!--   </li> -->
+      <!-- </ul>  -->
     </div>
   </div><!--/.nav-collapse -->
 </nav>
