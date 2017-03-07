@@ -1,6 +1,7 @@
 class VacanciesController < ApplicationController
   def index
-    @vacancies = Vacancy.search(params[:search])
+    @search = params[:search]
+    @vacancies = Vacancy.search(@search)
   end
 
   def new
