@@ -40,7 +40,7 @@ class Vacancy < ApplicationRecord
         vacancies.document @@ to_tsquery('#{lang}', ?)
     }
 
-    consultation = query.split(' ').map { |e| "#{e}:*" }.join('&')
-    self.find_by_sql([sql, consultation])
+    consult = query.split(' ').map { |e| "#{e}:*" }.join('&')
+    self.find_by_sql([sql, consult])
   end
 end
