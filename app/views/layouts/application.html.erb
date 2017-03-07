@@ -13,7 +13,7 @@
 
   <body>
     <!-- Fixed navbar -->
-    <%= render "shared/navbar" %>
+    <%= render "shared/navbar", search: @search %>
 
     <div class="container">
       <%= render partial: "shared/flash_messages", flash: flash %>

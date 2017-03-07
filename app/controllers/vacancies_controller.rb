@@ -1,6 +1,7 @@
 class VacanciesController < ApplicationController
   def index
-    @vacancies = Vacancy.all
+    @search = params[:search]
+    @vacancies = Vacancy.search(@search)
   end
 
   def new
@@ -9,9 +10,10 @@ class VacanciesController < ApplicationController
 
   def create
     @vacancy = Vacancy.new(vacancy_params)
+
     if @vacancy.save
       flash[:success] = t(".success")
-      redirect_to root_path
+      redirect_to @vacancy
     else
       render :new
     end
