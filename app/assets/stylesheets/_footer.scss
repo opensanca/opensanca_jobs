@@ -7,9 +7,7 @@ footer {
   padding: 10px;
   text-align: center;
 
-  p {
-    i {
-      color: $footer-heart-color;
-    }
+  p i {
+    color: $footer-heart-color;
   }
 }
