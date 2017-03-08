@@ -1,0 +1,15 @@
+@import 'variables';
+
+footer {
+  background-color: $footer-bg-color;
+  border-top: 1px solid $footer-border-color;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+
+  p {
+    i {
+      color: $footer-heart-color;
+    }
+  }
+}

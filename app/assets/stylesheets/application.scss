@@ -6,6 +6,8 @@ $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 @import "summernote";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
+@import "footer";
+
 body {
   font-family: "Open Sans", sans-serif;
   background: #f2f2f2;
@@ -45,7 +47,6 @@ body {
 
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.1); }
-
 
 .vacancy-list {
   margin-top: 20px;
@@ -204,12 +205,6 @@ body {
 .describe-img-company {
   border: 1px solid #eee;
   padding: 3px;
-}
-
-footer {
-  background-color: #fff;
-  margin-top: 10px;
-  padding: 10px;
 }
 
 @media (max-width: 768px) {
