@@ -3,9 +3,13 @@
 footer {
   background-color: $footer-bg-color;
   border-top: 1px solid $footer-border-color;
-  margin-top: 10px;
+  bottom: 0;
+  height: 38px;
+  left: 0;
   padding: 10px;
+  position: fixed;
   text-align: center;
+  width: 100%;
 
   i {
     color: $footer-heart-color;
