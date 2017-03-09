@@ -8,13 +8,13 @@ require 'faker'
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do |i|
-  Vacancy.create({
+  Vacancy.create!({
     job_title: Faker::Company.profession,
     location: Faker::Address.city,
     description: Faker::Hipster.sentence,
+    how_to_apply: Faker::Hipster.sentence,
     company_name: Faker::Company.name,
     company_url: Faker::Internet.url,
     company_email: Faker::Internet.email
   })
 end
-
