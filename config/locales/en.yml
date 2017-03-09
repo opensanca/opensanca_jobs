@@ -1,24 +1,41 @@
 en:
+  menu:
+    all_vacancies: "All Vacancies"
+  messages:
+    apply_for_job: "Apply for job"
+
   vacancies:
     index:
-      post_vacancy: 'Post a new Vacancy'
-      title:        'All Vacancies'
-      no_vacancies: 'Sorry, no vacancies posted 😔'
+      advertise_message:    "Advertise for free"
+      no_vacancies:         "Sorry, no vacancies posted 😔"
+      title:                "All Vacancies"
+      welcome_message_html: "Find the best job offers! <br> Find the ideal professional for your company!"
     show:
-      how_to_apply: 'How to apply'
+      apply_help_html: >
+                 <li>  Find a job, research the requirements and ensure that you meet them.</li>
+                 <li>  Write a resume and cover letter.</li>
+                 <li>  Get some references from past employers.</li>
+                 <li>  Apply for the job in online or by mail.</li>
+                 <li>  Contact the hiring manager one week after applying. </li>
+      help_friends:    "You can help your friends find good opportunities!"
+      how_to_apply:    "How to apply"
+      job_description: "Job Description"
+      recommend:       "Recommend this vacancy"
     new:
-      job_title:     'Job Title'
-      location:      'Location'
-      description:   'Description'
-      how_to_apply:  'How do candidates apply to the vacancy?'
+      company_details: "Details about the company"
+      description:     "Description"
+      how_to_apply:    "How do candidates apply to the vacancy?"
+      job_title:       "Job Title"
+      location:        "Location"
+      submit_vacancy:  "Submit your vacancy"
 
-      company_name:  'Name'
-      company_url:   'URL'
-      company_email: 'E-mail'
+      company_name:  "Name"
+      company_url:   "URL"
+      company_email: "E-mail"
     create:
-      success: 'Vacancy posted with success.'
+      success: "Vacancy posted with success."
 
   helpers:
     submit:
       vacancy:
-        create: 'Post vacancy'
+        create: "Post vacancy"
