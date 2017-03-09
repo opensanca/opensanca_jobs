@@ -11,7 +11,7 @@ footer {
   text-align: center;
   width: 100%;
 
-  i {
+  i:first-child {
     color: $footer-heart-color;
   }
 }

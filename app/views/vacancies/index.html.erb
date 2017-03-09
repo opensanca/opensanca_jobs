@@ -3,11 +3,10 @@
   <div class="row">
     <div class="col-md-12">
       <h1 class="text-center">
-        Find the best job offers! <br>
-        Find the ideal professional for your company!
+        <%= t(".welcome_message_html") %>
       </h1>
       <div class="text-center">
-          <%= link_to "Advertise for free", new_vacancy_path, class: "btn btn-primary btn-register-vacancy grow" %>
+          <%= link_to t(".advertise_message"), new_vacancy_path, class: "btn btn-primary btn-register-vacancy grow" %>
       </div>
     </div>
   </div>

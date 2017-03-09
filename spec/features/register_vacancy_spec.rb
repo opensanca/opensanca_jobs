@@ -4,7 +4,7 @@ RSpec.feature "User register a Vacancy" do
   scenario "with valid informations" do
     visit root_path
 
-    click_link I18n.t("vacancies.index.post_vacancy")
+    click_link I18n.t("vacancies.index.advertise_message")
 
     fill_in I18n.t("vacancies.new.job_title"),    with: "Stormtrooper"
     fill_in I18n.t("vacancies.new.location"),     with: "Death Star"
@@ -26,7 +26,7 @@ RSpec.feature "User register a Vacancy" do
   scenario "with invalid informations" do
     visit root_path
 
-    click_link I18n.t("vacancies.index.post_vacancy")
+    click_link I18n.t("vacancies.index.advertise_message")
 
     click_button "Post vacancy"
 

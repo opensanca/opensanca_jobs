@@ -14,11 +14,10 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="<%= menu_class(root_path) %>"><%= link_to "All Vacancies", root_path %></li>
-        <li><%= link_to t('vacancies.index.post_vacancy'), new_vacancy_path %></li>
+        <li class="<%= menu_class(root_path) %>"><%= link_to t("menu.all_vacancies"), root_path %></li>
       </ul>
 
-      <%= form_tag vacancies_path, class: "navbar-form navbar-left", method: :get do %>
+      <%= form_tag vacancies_path, class: "navbar-form navbar-right", method: :get do %>
         <div class="input-group">
           <%= text_field_tag 'search', search, class: 'form-control', placeholder: 'Search' %>
 
@@ -29,17 +28,6 @@
           </div>
         </div>
       <% end %>
-
-      <!-- <ul class="nav navbar&#45;nav navbar&#45;right navbar&#45;settings"> -->
-      <!--   <li class="dropdown"> -->
-      <!--     <a href="#" class="dropdown&#45;toggle" data&#45;toggle="dropdown"> -->
-      <!--       <span class="glyphicon glyphicon&#45;cog" title="Settings" /> -->
-      <!--     </a> -->
-      <!--     <ul class="dropdown&#45;menu"> -->
-      <!--       <li><a href="#">Option 1</a></li> -->
-      <!--     </ul> -->
-      <!--   </li> -->
-      <!-- </ul>  -->
     </div>
   </div><!--/.nav-collapse -->
 </nav>

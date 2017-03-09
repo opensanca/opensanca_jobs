@@ -15,6 +15,7 @@
 //= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
 //= require summernote
 //= require turbolinks
+//= require local_time
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {

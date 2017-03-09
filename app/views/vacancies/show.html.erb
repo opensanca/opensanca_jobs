@@ -1,6 +1,3 @@
-<!--<h1 class="page-title"><%= @vacancy.job_title %></h1>-->
-
-
 <section class="view-vacancy">
   <div class="row">
     <div class="col-md-9">
@@ -15,18 +12,18 @@
               <tr>
                 <td><span class="vacancy-describe-itens"> <i class="fa fa-briefcase" aria-hidden="true"></i></span></td>
                 <td><%= @vacancy.company_name %></td>
-                <td>http://www.xpto.com/</td>
+                <td><%= link_to @vacancy.company_url, @vacancy.company_url, target: 'blank' %></td>
               </tr>
 
               <tr>
                 <td><span class="vacancy-describe-itens"> <i class="fa fa-map-marker" aria-hidden="true"></i></span></td>
                 <td><%= @vacancy.location %></td>
-                <td> CLT - Remote</td>
+                <!-- <td> CLT - Remote</td> -->
               </tr>
 
               <tr>
                 <td><span class="vacancy-describe-itens"> <i class="fa fa-calendar" aria-hidden="true"></i> </span></td>
-                <td>20 days <mark>ago</mark></td>
+                <td><%= local_time_ago(@vacancy.created_at) %></td>
               </tr>
 
           </table>
@@ -34,15 +31,17 @@
 
         <div class="col-md-2">
             <button type="button" name="button" class="btn btn-primary btn-border-bottom-primary vertical-25 grow">
-               <i class="fa fa-trophy" aria-hidden="true"></i> Apply for Job</button>
+               <i class="fa fa-trophy" aria-hidden="true"></i>
+               <%= t("messages.apply_for_job") %>
+            </button>
             <br> <br>
         </div>
       </div> <!--/row-->
     </div><!--/col-md-9-->
     <div class="col-md-3">
       <div class="box-share-vacancy">
-        <h4> <i class="fa fa-rocket" aria-hidden="true"></i> Recommend this vacancy</h4>
-          <p> You can help your friends find good opportunities!</p>
+        <h4> <i class="fa fa-rocket" aria-hidden="true"></i> <%= t(".recommend") %></h4>
+          <p><%= t(".help_friends") %></p>
           <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i> </a>
           <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
           <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i> </a>
@@ -59,63 +58,30 @@
   <div class="row">
     <div class="col-md-12">
 
-    <h3>Job Description</h3>
+    <h3><%= t(".job_description") %></h3>
       <hr>
     <p class="text-justify">
       <%= sanitize(@vacancy.description) %>
     </p>
 
-    <h3> How to apply
-        <a class="btn-hint" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-       </a>
+    <h3>
+      <%= t(".how_to_apply") %>
+      <a class="btn-hint" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+     </a>
     </h3>
       <hr>
     <div class="collapse" id="collapseExample">
       <div class="question-apply">
          <h5></h5>
          <ol>
-           <li>  Find a job, research the requirements, and ensure that you meet them.</li>
-           <li>  Write a resume and cover letter.</li>
-           <li>  Get some references from past employers.</li>
-           <li>  Apply for the job in person, online, or by mail.</li>
-           <li>  Contact the hiring manager after the one week after applying. </li>
+           <%= t(".apply_help_html") %>
          </ol>
       </div>
     </div>
     <p class="text-jusify">
-    <%= @vacancy.how_to_apply %>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <%= @vacancy.how_to_apply %>
     </p>
     </div>
   </div>
 </section>
-
-
-<!--
-<div class="panel panel-default">
-  <div class="panel-body">
-    <div class="vacancy-details">
-      <span><i class="fa fa-briefcase" aria-hidden="true"></i><%= @vacancy.company_name %></span>
-      <span><i class="fa fa-map-marker" aria-hidden="true"></i><%= @vacancy.location %></span>
-    </div>
-
-    <div class="vacancy-description">
-      <%= sanitize(@vacancy.description) %>
-    </div>
-
-    <br>
-
-    <h3><%= t('.how_to_apply') %></h3>
-
-    <div class="vacancy-how-to-apply">
-      <%= @vacancy.how_to_apply %>
-    </div>
-  </div>
-</div>
-
--->
