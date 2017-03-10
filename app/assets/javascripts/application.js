@@ -16,5 +16,6 @@
 //= require summernote
 //= require turbolinks
 //= require local_time
+//= require summernote_component
 //= require app
 //= require_tree .

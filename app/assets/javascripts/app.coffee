@@ -1,9 +1,7 @@
 window.App ||= {}
 
 App.init = ->
-  $('[data-provider="summernote"]').each ->
-    $(this).summernote height: '400px'
-    return
+  SummerNoteComponent.init('[data-provider="summernote"]', '400px')
 
 $(document).on "turbolinks:load", ->
   App.init()
