@@ -1,0 +1,42 @@
+pt-BR:
+  menu:
+    all_vacancies: "Todas as vagas"
+  messages:
+    apply_for_job: "Candidatar-se"
+
+  vacancies:
+    index:
+      advertise_message:    "Anunciar vaga"
+      no_vacancies:         "Desculpe, nenhuma vaga disponível 😔"
+      title:                "Todas as vagas"
+      welcome_message_html: "Encontre as melhores vagas! <br> Encontre os profissionais certos para sua empresa!"
+    show:
+      apply_help_html: >
+                 <li>  Encontre uma vaga, pesquise seus requisitos e garata que os cumpra.</li>
+                 <li>  Escreva seu currículo e uma carta de apresentação.</li>
+                 <li>  Pegue algumas referências de experiências anteriores.</li>
+                 <li>  Candidate-se online ou por E-Mail.</li>
+                 <li>  Após uma semana, entre em contato com o responsável pela contratação.</li>
+      help_friends:    "Você pode ajudar seus amigos a encontrar ótimas oportunidades!"
+      how_to_apply:    "Como candidatar-se"
+      job_description: "Descrição da vaga"
+      recommend:       "Recomendar vaga"
+    new:
+      company_details: "Detalhes sobre a empresa"
+      description:     "Descrição da vaga"
+      how_to_apply:    "Como os candidatos devem se aplicar para a vaga?"
+      job_title:       "Título da vaga"
+      location:        "Local"
+      submit_vacancy:  "Enviar vaga"
+
+      company_name:  "Nome"
+      company_url:   "URL"
+      company_email: "E-mail"
+    create:
+      success: "Vaga enviada com sucesso."
+    search: "Pesquisar"
+
+  helpers:
+    submit:
+      vacancy:
+        create: "Enviar vaga"
