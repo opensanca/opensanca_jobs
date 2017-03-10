@@ -12,12 +12,12 @@ RSpec.feature "User register a Vacancy" do
     fill_in I18n.t("vacancies.new.how_to_apply"), with: "Send an email to hr@theempire.com with your CV and a cover letter."
 
     within("#company-details") do
-      fill_in "Name",   with: "The Empire"
-      fill_in "URL",    with: "www.theempire.com"
-      fill_in "E-mail", with: "hr@theempire.com"
+      fill_in I18n.t("vacancies.new.company_name"),   with: "The Empire"
+      fill_in I18n.t("vacancies.new.company_url"),    with: "www.theempire.com"
+      fill_in I18n.t("vacancies.new.company_email"),  with: "hr@theempire.com"
     end
 
-    click_button "Post vacancy"
+    click_button I18n.t("helpers.submit.vacancy.create")
 
     expect(page).to have_text I18n.t("vacancies.create.success")
     expect(page).to have_text "Stormtrooper"
@@ -28,7 +28,7 @@ RSpec.feature "User register a Vacancy" do
 
     click_link I18n.t("vacancies.index.advertise_message")
 
-    click_button "Post vacancy"
+    click_button I18n.t("helpers.submit.vacancy.create")
 
     expect(page).not_to have_text I18n.t("vacancies.create.success")
   end

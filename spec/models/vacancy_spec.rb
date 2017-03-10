@@ -43,14 +43,14 @@ RSpec.describe Vacancy, type: :model do
         vacancy_one = create(:vacancy, job_title: 'java programmer')
         create(:vacancy, job_title: 'ruby developer')
 
-        expect(Vacancy.search('programmers java')).to eq([vacancy_one])
+        expect(Vacancy.search('programmers java', 'english')).to eq([vacancy_one])
       end
 
       it 'returns results that contains search param' do
         vacancy_one = create(:vacancy, job_title: 'ruby developer')
         create(:vacancy, job_title: 'java programmer')
 
-        expect(Vacancy.search('dev ruby')).to eq([vacancy_one])
+        expect(Vacancy.search('dev ruby', 'english')).to eq([vacancy_one])
       end
     end
   end
