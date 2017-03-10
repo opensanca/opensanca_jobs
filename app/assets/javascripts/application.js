@@ -16,10 +16,5 @@
 //= require summernote
 //= require turbolinks
 //= require local_time
+//= require app
 //= require_tree .
-
-$(document).on('turbolinks:load', function() {
-  $('[data-provider="summernote"]').each(function(){
-    $(this).summernote({ height: "400px" });
-  });
-});
