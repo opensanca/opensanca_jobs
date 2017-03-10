@@ -1,4 +1,4 @@
-class Search::Vacancy
+class Searchs::Vacancy
   def initialize(repository = Vacancy)
     @repository = repository
   end
