@@ -11,10 +11,10 @@ class Vacancy < ApplicationRecord
     end
   end
 
-  def self.search(query = nil)
+  def self.search(query = nil, lang = nil)
     return Vacancy.all if query.blank?
 
-    lang = I18n.locale == :'pt-BR' ? "portuguese" : "english"
+    lang ||= I18n.locale == :'pt-BR' ? "portuguese" : "english"
 
     sql = %{
       select

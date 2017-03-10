@@ -6,7 +6,7 @@ RSpec.feature "Search vacancies" do
 
     visit root_path
 
-    fill_in "Search", with: ""
+    fill_in I18n.t("vacancies.search"), with: ""
     find('.input-group-btn button').click
 
     expect(page).to have_selector('section.vacancy-item', count: 3)
@@ -18,7 +18,7 @@ RSpec.feature "Search vacancies" do
 
     visit root_path
 
-    fill_in "Search", with: "Stormtrooper"
+    fill_in I18n.t("vacancies.search"), with: "Stormtrooper"
     find('.input-group-btn button').click
 
     expect(page).to have_selector('section.vacancy-item', count: 1)

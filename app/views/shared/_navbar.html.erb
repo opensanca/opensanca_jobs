@@ -19,7 +19,7 @@
 
       <%= form_tag vacancies_path, class: "navbar-form navbar-right", method: :get do %>
         <div class="input-group">
-          <%= text_field_tag 'search', search, class: 'form-control', placeholder: 'Search' %>
+          <%= text_field_tag 'search', search, class: 'form-control', placeholder: t("vacancies.search") %>
 
           <div class="input-group-btn">
             <button class="btn btn-default" type="submit">

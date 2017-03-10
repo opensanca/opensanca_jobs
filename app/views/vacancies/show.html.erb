@@ -23,7 +23,7 @@
 
               <tr>
                 <td><span class="vacancy-describe-itens"> <i class="fa fa-calendar" aria-hidden="true"></i> </span></td>
-                <td><%= local_time_ago(@vacancy.created_at) %></td>
+                <td><%= I18n.l(@vacancy.created_at, format: :short) %></td>
               </tr>
 
           </table>
