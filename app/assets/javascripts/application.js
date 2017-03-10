@@ -15,7 +15,6 @@
 //= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
 //= require summernote
 //= require turbolinks
-//= require local_time
 //= require summernote_component
 //= require app
 //= require_tree .
