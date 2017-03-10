@@ -1,0 +1,25 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Dynamic Render Path",
+      "warning_code": 15,
+      "fingerprint": "0fec207730e6e49e3a26072db4ac2c9340f15edc89c34369d217312b131b0f30",
+      "check_name": "Render",
+      "message": "Render path contains parameter value",
+      "file": "app/views/vacancies/index.html.erb",
+      "line": 18,
+      "link": "http://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
+      "code": "render(action => Searchs::Vacancy.list(params[:search]), {})",
+      "render_path": [{"type":"controller","class":"VacanciesController","method":"index","line":5,"file":"app/controllers/vacancies_controller.rb"}],
+      "location": {
+        "type": "template",
+        "template": "vacancies/index"
+      },
+      "user_input": "params[:search]",
+      "confidence": "Weak",
+      "note": ""
+    }
+  ],
+  "updated": "2017-03-10 11:43:36 -0300",
+  "brakeman_version": "3.5.0"
+}
