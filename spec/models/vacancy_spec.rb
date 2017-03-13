@@ -28,4 +28,15 @@ RSpec.describe Vacancy, type: :model do
     vacancy.valid?
     expect(vacancy.company_url).to eq("http://opensanca.com.br")
   end
+
+  describe ".recent" do
+    it "sorts the vacancies by the date from the newest to the oldest" do
+      oldest = create(:vacancy, created_at: 1.year.ago)
+      newest = create(:vacancy, created_at: 5.days.ago)
+
+      result = described_class.recent
+
+      expect(result.first).to eq(newest)
+    end
+  end
 end

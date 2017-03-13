@@ -1,4 +1,6 @@
 class Vacancy < ApplicationRecord
+  scope :recent, -> { order(created_at: :desc) }
+
   validates :job_title, :location, :description, :how_to_apply, :company_name, :company_url, :company_email,
             presence: true
 
