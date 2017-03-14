@@ -1,0 +1,11 @@
+$fade-color:  rgba(255, 255, 136, 0.8);
+$transparent: rgba(0, 0, 0, 0);
+
+@keyframes yellowfade {
+  0% { background-color: $fade-color; }
+  100% { background-color: $transparent; }
+}
+
+.item-highlight {
+  animation: yellowfade 1s;
+}

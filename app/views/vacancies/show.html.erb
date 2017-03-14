@@ -30,11 +30,12 @@
         </div>
 
         <div class="col-md-2">
-            <button type="button" name="button" class="btn btn-primary btn-border-bottom-primary vertical-25 grow">
-               <i class="fa fa-trophy" aria-hidden="true"></i>
-               <%= t("messages.apply_for_job") %>
-            </button>
-            <br> <br>
+          <%= link_to "#", class: "btn btn-primary btn-border-bottom-primary vertical-25 grow", data: { behavior: "apply-to-job", instructions: "how_to_apply", anchor: "how_to_apply_title" } do %>
+           <i class="fa fa-trophy" aria-hidden="true"></i>
+           <%= t("messages.apply_for_job") %>
+          <% end %>
+
+          <br> <br>
         </div>
       </div> <!--/row-->
     </div><!--/col-md-9-->
@@ -64,7 +65,7 @@
       <%= sanitize(@vacancy.description) %>
     </p>
 
-    <h3>
+    <h3 id="how_to_apply_title">
       <%= t(".how_to_apply") %>
       <a class="btn-hint" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
         <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
@@ -79,7 +80,7 @@
          </ol>
       </div>
     </div>
-    <p class="text-jusify">
+    <p class="text-jusify" id="how_to_apply">
       <%= @vacancy.how_to_apply %>
     </p>
     </div>

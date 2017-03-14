@@ -17,4 +17,5 @@
 //= require turbolinks
 //= require summernote_component
 //= require app
+//= require apply_to_job
 //= require_tree .
