@@ -4,6 +4,7 @@ $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 @import "font-awesome";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "summernote";
+@import "apply_to_job";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 @import "footer";
@@ -191,10 +192,11 @@ body {
     }
 }
 .report-vacancy > tbody > tr > td {
-  padding: 0;
-  line-height: 1.42857;
-  vertical-align: middle;
   border-top: 1px solid transparent;
+  line-height: 1.42857;
+  padding: 0;
+  padding-right: 10px;
+  vertical-align: middle;
 }
 
 .describe-vacancy {
