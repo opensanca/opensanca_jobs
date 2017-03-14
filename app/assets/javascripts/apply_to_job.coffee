@@ -1,6 +1,9 @@
 window.App.ApplyToJob =
   highlight_instructions: (instructions_element, anchor_element) ->
-    anchor_element.scrollIntoView()
+    $('body').animate({
+      scrollTop: $(anchor_element).offset().top
+    }, 1000)
+
     instructions_element.classList.add("item-highlight")
 
     setTimeout ( ->
