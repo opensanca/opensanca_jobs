@@ -1,5 +1,5 @@
 class Searchs::Vacancy
-  def initialize(repository = Vacancy)
+  def initialize(repository = ::Vacancy)
     @repository = repository
   end
 
