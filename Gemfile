@@ -25,6 +25,9 @@ gem "jbuilder", "~> 2.5"
 # Faker used to seed data (require false)
 gem "faker", require: false
 
+# Slug generation
+gem "friendly_id"
+
 group :development, :test do
   # Code analysis
   gem "brakeman"

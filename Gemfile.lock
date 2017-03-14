@@ -88,6 +88,8 @@ GEM
     ffi (1.9.17)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
+    friendly_id (5.2.0)
+      activerecord (>= 4.0.0)
     fuubar (2.2.0)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
@@ -258,6 +260,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   font-awesome-sass
+  friendly_id
   fuubar
   jbuilder (~> 2.5)
   jquery-rails
