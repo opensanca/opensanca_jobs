@@ -1,4 +1,7 @@
 class Vacancy < ApplicationRecord
+  include FriendlyId
+
+  friendly_id :slug_candidates, use: :slugged
   scope :recent, -> { order(created_at: :desc) }
 
   validates :job_title, :location, :description, :how_to_apply, :company_name, :company_url, :company_email,
@@ -11,5 +14,13 @@ class Vacancy < ApplicationRecord
     unless self.company_url.nil? || self.company_url[0, 4] == "http"
       self.company_url = "http://#{self.company_url}"
     end
+  end
+
+  private
+
+  def slug_candidates
+    [
+      [:company_name, :job_title]
+    ]
   end
 end
