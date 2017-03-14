@@ -43,14 +43,8 @@
       <div class="box-share-vacancy">
         <h4> <i class="fa fa-rocket" aria-hidden="true"></i> <%= t(".recommend") %></h4>
           <p><%= t(".help_friends") %></p>
-          <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i> </a>
-          <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i> </a>
-
-        </div>
-
-        <div class="box-vacancySimilar">
-        </div>
+          <%= share_links_to_current_page %>
+      </div>
   </div><!--/col-md-3-->
 </div>
 </section>
