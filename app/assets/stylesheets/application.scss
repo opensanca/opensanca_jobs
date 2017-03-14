@@ -192,10 +192,11 @@ body {
     }
 }
 .report-vacancy > tbody > tr > td {
-  padding: 0;
-  line-height: 1.42857;
-  vertical-align: middle;
   border-top: 1px solid transparent;
+  line-height: 1.42857;
+  padding: 0;
+  padding-right: 10px;
+  vertical-align: middle;
 }
 
 .describe-vacancy {

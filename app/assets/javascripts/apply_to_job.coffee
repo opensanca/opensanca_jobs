@@ -1,17 +1,16 @@
 window.App.ApplyToJob =
-  highlight_instructions: (instructions_element, anchor_element) ->
+  highlight_instructions: (anchor_element) ->
     $('body').animate({
-      scrollTop: $(anchor_element).offset().top
+      scrollTop: $(anchor_element).offset().top - 60
     }, 1000)
 
-    instructions_element.classList.add("item-highlight")
+    anchor_element.classList.add("item-highlight")
 
     setTimeout ( ->
-      instructions_element.classList.remove("item-highlight")
+      anchor_element.classList.remove("item-highlight")
     ), 5200
 
 $(document).on "click", "[data-behavior~=apply-to-job]", ->
-  instructions_element = document.getElementById(this.dataset.instructions)
   anchor_element       = document.getElementById(this.dataset.anchor)
-  App.ApplyToJob.highlight_instructions(instructions_element, anchor_element)
+  App.ApplyToJob.highlight_instructions(anchor_element)
   return false
