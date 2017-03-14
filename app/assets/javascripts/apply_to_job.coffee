@@ -8,7 +8,7 @@ window.App.ApplyToJob =
 
     setTimeout ( ->
       instructions_element.classList.remove("item-highlight")
-    ), 1000
+    ), 3200
 
 $(document).on "click", "[data-behavior~=apply-to-job]", ->
   instructions_element = document.getElementById(this.dataset.instructions)
