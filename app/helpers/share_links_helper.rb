@@ -8,7 +8,7 @@ module ShareLinksHelper
   def share_links_to_current_page
     current_page = request.original_url
     content_tag(:p) do
-      PROVIDERS.keys.collect { |social_network| concat(share_link_for(social_network, current_page)) }
+      PROVIDERS.keys.map { |social_network| concat(share_link_for(social_network, current_page)) }
     end
   end
 
