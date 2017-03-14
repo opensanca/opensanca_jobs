@@ -16,6 +16,7 @@ class Searchs::Vacancy
         description,
         company_name,
         created_at,
+        slug,
         document
       FROM
         (SELECT
@@ -25,6 +26,7 @@ class Searchs::Vacancy
           description,
           company_name,
           created_at,
+          slug,
           to_tsvector('#{lang}', location) || ' ' ||
           to_tsvector('#{lang}', company_name) || ' ' ||
           to_tsvector('#{lang}', job_title) || ' ' ||

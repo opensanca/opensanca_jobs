@@ -20,7 +20,7 @@ class VacanciesController < ApplicationController
   end
 
   def show
-    @vacancy = Vacancy.find(params[:id])
+    @vacancy = Vacancy.friendly.find(params[:id])
   end
 
   private
