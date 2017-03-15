@@ -1,3 +1,7 @@
+<%= content_for :metatags do %>
+  <%= render("shared/metatags", { title: @vacancy.job_title, description: @vacancy.description }) %>
+<% end %>
+
 <section class="view-vacancy">
   <div class="row">
     <div class="col-md-9">
