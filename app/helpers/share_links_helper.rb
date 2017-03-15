@@ -1,7 +1,7 @@
 module ShareLinksHelper
   PROVIDERS = {
     facebook: { url: 'https://www.facebook.com/sharer/sharer.php?u=#current_page#', icon: 'fa-facebook-official' },
-    twitter:  { url: 'Look this job: #current_page#', icon: 'fa-twitter-square' },
+    twitter:  { url: 'https://twitter.com/home?status="Look this job: #current_page#"', icon: 'fa-twitter-square' },
     linkedin: { url: 'https://www.linkedin.com/shareArticle?url=#current_page#', icon: 'fa-linkedin-square' }
   }.freeze
 
