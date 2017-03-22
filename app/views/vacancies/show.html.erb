@@ -1,5 +1,5 @@
 <%= content_for :metatags do %>
-  <%= render("shared/metatags", { title: @vacancy.job_title, description: @vacancy.description }) %>
+  <%= render("shared/metatags", { title: @vacancy.job_title, description: t('metatags.vacancy_description', job_title: @vacancy.job_title, company_name: @vacancy.company_name, location: @vacancy.location) }) %>
 <% end %>
 
 <section class="view-vacancy">
