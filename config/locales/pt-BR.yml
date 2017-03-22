@@ -1,6 +1,8 @@
 pt-BR:
   menu:
     all_vacancies: "Todas as vagas"
+  metatags:
+    vacancy_description: '%{job_title} - %{company_name} em %{location}.'
   messages:
     apply_for_job: "Aplicar"
 
