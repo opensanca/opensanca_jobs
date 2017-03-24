@@ -28,6 +28,9 @@ gem 'faker', require: false
 # Slug generation
 gem 'friendly_id'
 
+# Background processing
+gem 'sidekiq'
+
 group :development, :test do
   # Code analysis
   gem 'brakeman'
