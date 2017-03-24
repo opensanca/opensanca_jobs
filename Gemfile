@@ -31,6 +31,9 @@ gem 'friendly_id'
 # Background processing
 gem 'sidekiq'
 
+# Api Wrappers
+gem 'slack-notifier' # Send notifications to slack channels
+
 group :development, :test do
   # Code analysis
   gem 'brakeman'
