@@ -51,6 +51,9 @@ group :development, :test do
   gem 'fuubar'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+
+  # environment variables
+  gem 'dotenv-rails'
 end
 
 group :development do
