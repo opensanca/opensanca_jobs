@@ -1,4 +1,4 @@
-require "slack_notifier"
+require 'slack_notifier'
 
 class NotifyVacancyOnSlackWorker
   include Sidekiq::Worker
