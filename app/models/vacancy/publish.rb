@@ -1,6 +1,10 @@
 class Vacancy::Publish
+  def initialize(worker: NotifyVacancyOnSlackWorker)
+    @worker = worker
+  end
+
   def publish(vacancy)
     vacancy.save!
-    NotifyVacancyOnSlackWorker.perform_async(vacancy.id)
+    @worker.perform_async(vacancy.id)
   end
 end
