@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe NotifyVacancyOnSlackWorker, type: :worker do
+describe NotifyVacancyOnSlackWorker, type: :worker do
   describe '#perform' do
     let(:vacancy_id) { create(:vacancy).id }
 

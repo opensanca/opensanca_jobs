@@ -2,7 +2,7 @@ en:
   menu:
     all_vacancies: "All Vacancies"
   metatags:
-    vacancy_description: '%{job_title} - %{company_name} em %{location}.'
+    vacancy_description: '%{job_title} - %{company_name} in %{location}.'
   messages:
     apply_for_job: "Apply for job"
 
