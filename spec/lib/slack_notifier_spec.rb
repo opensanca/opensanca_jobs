@@ -12,7 +12,7 @@ describe SlackNotifier, type: :model do
     subject { notifier.notify('message') }
 
     context 'in development/test' do
-      it 'notifies the channel' do
+      it 'does not notify the channel' do
         expect(notifier_double).not_to receive(:ping).with('message')
 
         subject
