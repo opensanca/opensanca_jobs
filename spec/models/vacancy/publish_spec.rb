@@ -3,7 +3,7 @@ require 'sidekiq/testing'
 
 describe Vacancy::Publish, type: :model do
   describe '#publish' do
-    subject { described_class.new(vacancy).publish }
+    subject { described_class.new.publish(vacancy) }
 
     context 'with a valid vacancy' do
       let(:vacancy) { build(:vacancy) }

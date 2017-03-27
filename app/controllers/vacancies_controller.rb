@@ -12,7 +12,7 @@ class VacanciesController < ApplicationController
 
   def create
     @vacancy = Vacancy.new(vacancy_params)
-    Vacancy::Publish.new(@vacancy).publish
+    Vacancy::Publish.new.publish(@vacancy)
     flash[:success] = t(".success")
     redirect_to @vacancy
   end
