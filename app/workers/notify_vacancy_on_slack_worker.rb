@@ -6,7 +6,7 @@ class NotifyVacancyOnSlackWorker
 
   def perform(vacancy_id)
     vacancy = Vacancy.find(vacancy_id)
-    message = %Q(
+    message = %(
     #{I18n.t('metatags.vacancy_description', job_title: vacancy.job_title, company_name: vacancy.company_name, location: vacancy.location)}
 
     veja a vaga em: #{vacancy_url(vacancy)}
