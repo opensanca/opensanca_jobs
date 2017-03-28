@@ -35,7 +35,7 @@ gem 'sidekiq'
 gem 'slack-notifier' # Send notifications to slack channels
 
 # Monitoring
-gem 'librato-rails'
+gem 'scout_apm'
 
 group :development, :test do
   # Code analysis
