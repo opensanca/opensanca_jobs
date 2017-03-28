@@ -28,6 +28,12 @@ gem 'faker', require: false
 # Slug generation
 gem 'friendly_id'
 
+# Background processing
+gem 'sidekiq'
+
+# Api Wrappers
+gem 'slack-notifier' # Send notifications to slack channels
+
 group :development, :test do
   # Code analysis
   gem 'brakeman'
@@ -45,6 +51,9 @@ group :development, :test do
   gem 'fuubar'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+
+  # environment variables
+  gem 'dotenv-rails'
 end
 
 group :development do

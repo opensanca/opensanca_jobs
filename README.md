@@ -1,28 +1,45 @@
-# Build Status
+# OpenJobs
+
+## Build Status
 
 [![Build Status](https://semaphoreci.com/api/v1/duduribeiro/opensanca_jobs/branches/master/badge.svg)](https://semaphoreci.com/duduribeiro/opensanca_jobs)
 
-# README
+## README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Dependencies
 
-Things you may want to cover:
+#### Ruby Version
+The application uses Ruby 2.4.1. You should install it to run the application. (for development we recommend to use [RVM](https://rvm.io/))
 
-* Ruby version
+#### Database
 
-* System dependencies
+We use PostgreSQL as database. You should install it to run the app.
+If needed, you should configure the `config/database.yml` file.
 
-* Configuration
+### Configuring the project
 
-* Database creation
+Clone it
 
-* Database initialization
+```
+git clone https://github.com/opensanca/opensanca_jobs.git
+cd opensanca_jobs
+```
 
-* How to run the test suite
+Install the dependencies and configure the database
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+bin/setup
+```
 
-* Deployment instructions
+Run the tests
+```
+rspec .
+```
 
-* ...
+Start the app:
+
+```
+bin/rails s
+```
+
+Navigate to http://localhost:3000 to access

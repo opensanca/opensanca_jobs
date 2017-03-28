@@ -1,4 +1,6 @@
 class VacanciesController < ApplicationController
+  rescue_from ActiveRecord::RecordInvalid, with: :render_new
+
   def index
     @search = params[:search]
     @vacancies = Searchs::Vacancy.list(@search)
@@ -10,13 +12,9 @@ class VacanciesController < ApplicationController
 
   def create
     @vacancy = Vacancy.new(vacancy_params)
-
-    if @vacancy.save
-      flash[:success] = t(".success")
-      redirect_to @vacancy
-    else
-      render :new
-    end
+    Vacancy::Publish.new.publish(@vacancy)
+    flash[:success] = t(".success")
+    redirect_to @vacancy
   end
 
   def show
@@ -24,6 +22,10 @@ class VacanciesController < ApplicationController
   end
 
   private
+
+  def render_new
+    render :new
+  end
 
   def vacancy_params
     params.require(:vacancy).permit(:job_title, :location, :description, :how_to_apply, :company_name, :company_url,
