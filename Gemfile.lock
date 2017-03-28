@@ -183,6 +183,8 @@ GEM
       ffi (>= 0.5.0)
     redis (3.3.3)
     require_all (1.4.0)
+    rollbar (2.14.1)
+      multi_json
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -288,6 +290,7 @@ DEPENDENCIES
   rack-mini-profiler
   rails (~> 5.1.0.rc1)
   rails_best_practices
+  rollbar
   rspec-rails
   rubocop-github
   sass-rails!

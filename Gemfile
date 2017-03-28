@@ -34,7 +34,8 @@ gem 'sidekiq'
 # Api Wrappers
 gem 'slack-notifier' # Send notifications to slack channels
 
-# Monitoring
+# Monitoring and error tracking
+gem 'rollbar'
 gem 'scout_apm'
 
 group :development, :test do
