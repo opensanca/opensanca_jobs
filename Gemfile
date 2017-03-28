@@ -34,6 +34,9 @@ gem 'sidekiq'
 # Api Wrappers
 gem 'slack-notifier' # Send notifications to slack channels
 
+# Monitoring
+gem 'librato-rails'
+
 group :development, :test do
   # Code analysis
   gem 'brakeman'
