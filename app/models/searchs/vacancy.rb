@@ -6,7 +6,7 @@ class Searchs::Vacancy
   def list(query = nil)
     return @repository.recent if query.blank?
 
-    @repository.where("tsv @@ to_tsquery('portuguese', :query)", query: query)
+    @repository.recent.where("tsv @@ to_tsquery('portuguese', :query)", query: query)
   end
 
   def self.list(query = nil)
