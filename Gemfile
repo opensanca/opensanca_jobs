@@ -36,7 +36,7 @@ gem 'slack-notifier' # Send notifications to slack channels
 
 # Monitoring and error tracking
 gem 'rollbar'
-gem 'scout_apm'
+gem 'newrelic_rpm'
 
 group :development, :test do
   # Code analysis

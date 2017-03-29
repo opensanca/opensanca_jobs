@@ -123,6 +123,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
+    newrelic_rpm (3.16.0.318)
     nio4r (2.0.0)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
@@ -213,7 +214,6 @@ GEM
     ruby-progressbar (1.8.1)
     sass (3.4.23)
     schmooze (0.1.6)
-    scout_apm (2.1.22)
     sexp_processor (4.8.0)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
@@ -283,6 +283,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  newrelic_rpm
   pg (~> 0.18)
   pry
   pry-nav
@@ -294,7 +295,6 @@ DEPENDENCIES
   rspec-rails
   rubocop-github
   sass-rails!
-  scout_apm
   shoulda-matchers
   sidekiq
   slack-notifier
