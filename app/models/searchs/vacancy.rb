@@ -3,7 +3,7 @@ class Searchs::Vacancy
     @repository = repository
   end
 
-  def list(query = nil, lang = nil)
+  def list(query = nil)
     return @repository.recent if query.blank?
 
     sql = %{
@@ -25,7 +25,7 @@ class Searchs::Vacancy
     @repository.find_by_sql([sql, consult])
   end
 
-  def self.list(query = nil, lang = nil)
-    new.list(query, lang)
+  def self.list(query = nil)
+    new.list(query)
   end
 end
