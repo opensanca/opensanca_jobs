@@ -6,8 +6,6 @@ class Searchs::Vacancy
   def list(query = nil, lang = nil)
     return @repository.recent if query.blank?
 
-    lang ||= I18n.locale == :'pt-BR' ? "portuguese" : "english"
-
     sql = %{
       SELECT
         id,
@@ -16,24 +14,10 @@ class Searchs::Vacancy
         description,
         company_name,
         created_at,
-        slug,
-        document
-      FROM
-        (SELECT
-          id,
-          job_title,
-          location,
-          description,
-          company_name,
-          created_at,
-          slug,
-          to_tsvector('#{lang}', location) || ' ' ||
-          to_tsvector('#{lang}', company_name) || ' ' ||
-          to_tsvector('#{lang}', job_title) || ' ' ||
-          to_tsvector('#{lang}', description) AS document
-        FROM vacancies) vacancies
+        slug
+      FROM vacancies
       WHERE
-        vacancies.document @@ to_tsquery('#{lang}', ?)
+        vacancies.tsv @@ to_tsquery('portuguese', ?)
       ORDER BY created_at DESC
     }
 
