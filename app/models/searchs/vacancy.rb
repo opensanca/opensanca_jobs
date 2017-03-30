@@ -6,7 +6,7 @@ class Searchs::Vacancy
   def list(query = nil)
     return @repository.recent if query.blank?
 
-    query = query.split(' ').map { |entry| "#{entry}:*" }.join(' & ')
+    query = query.split.map { |entry| "#{entry}:*" }.join(' & ')
 
     @repository.recent.where("tsv @@ to_tsquery('portuguese', :query)", query: query)
   end
