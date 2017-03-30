@@ -19,15 +19,14 @@ describe Searchs::Vacancy, type: :search do
       context 'with the exact keyword' do
         let(:keyword) { 'programador ruby' }
 
-	it { is_expected.to eq([vacancy]) }
+        it { is_expected.to eq([vacancy]) }
       end
 
       context 'with a similar keyword' do
         let(:keyword) { 'programadores ruby' }
 
-	it { is_expected.to eq([vacancy]) }
+        it { is_expected.to eq([vacancy]) }
       end
     end
-
   end
 end
