@@ -3,45 +3,15 @@ class Searchs::Vacancy
     @repository = repository
   end
 
-  def list(query = nil, lang = nil)
+  def list(query = nil)
     return @repository.recent if query.blank?
 
-    lang ||= I18n.locale == :'pt-BR' ? "portuguese" : "english"
+    query = query.split.map { |entry| "#{entry}:*" }.join(' & ')
 
-    sql = %{
-      SELECT
-        id,
-        job_title,
-        location,
-        description,
-        company_name,
-        created_at,
-        slug,
-        document
-      FROM
-        (SELECT
-          id,
-          job_title,
-          location,
-          description,
-          company_name,
-          created_at,
-          slug,
-          to_tsvector('#{lang}', location) || ' ' ||
-          to_tsvector('#{lang}', company_name) || ' ' ||
-          to_tsvector('#{lang}', job_title) || ' ' ||
-          to_tsvector('#{lang}', description) AS document
-        FROM vacancies) vacancies
-      WHERE
-        vacancies.document @@ to_tsquery('#{lang}', ?)
-      ORDER BY created_at DESC
-    }
-
-    consult = query.split(' ').map { |entry| "#{entry}:*" }.join('&')
-    @repository.find_by_sql([sql, consult])
+    @repository.recent.where("tsv @@ to_tsquery('portuguese', :query)", query: query)
   end
 
-  def self.list(query = nil, lang = nil)
-    new.list(query, lang)
+  def self.list(query = nil)
+    new.list(query)
   end
 end
