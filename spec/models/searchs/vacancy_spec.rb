@@ -11,18 +11,21 @@ describe Searchs::Vacancy, type: :search do
     end
 
     context 'with parameter' do
-      it 'returns results that contains search param' do
-        vacancy_one = create(:vacancy, job_title: 'programador ruby')
-        create(:vacancy, job_title: 'programador java')
+      let!(:vacancy)       { create(:vacancy, job_title: 'programador ruby') }
+      let!(:other_vacancy) { create(:vacancy, job_title: 'programador java') }
 
-        expect(Searchs::Vacancy.list('programador ruby')).to eq([vacancy_one])
+      subject { Searchs::Vacancy.list(keyword) }
+
+      context 'with the exact keyword' do
+        let(:keyword) { 'programador ruby' }
+
+	it { is_expected.to eq([vacancy]) }
       end
 
-      it 'returns results that contains a similar keyword in search param' do
-        vacancy_one = create(:vacancy, job_title: 'programador ruby')
-        create(:vacancy, job_title: 'programador java')
+      context 'with a similar keyword' do
+        let(:keyword) { 'programadores ruby' }
 
-        expect(Searchs::Vacancy.list('programadores ruby')).to eq([vacancy_one])
+	it { is_expected.to eq([vacancy]) }
       end
     end
 
