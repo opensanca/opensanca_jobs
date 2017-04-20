@@ -35,6 +35,7 @@ gem 'sidekiq'
 gem 'slack-notifier' # Send notifications to slack channels
 
 # Monitoring and error tracking
+gem 'bugsnag'
 gem 'rollbar'
 gem 'newrelic_rpm'
 

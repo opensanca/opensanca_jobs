@@ -54,6 +54,7 @@ GEM
     ast (2.3.0)
     awesome_print (1.7.0)
     brakeman (3.5.0)
+    bugsnag (5.3.1)
     builder (3.2.3)
     capybara (2.7.1)
       addressable
@@ -272,6 +273,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   brakeman
+  bugsnag
   capybara
   coffee-rails (~> 4.2)
   dotenv-rails
