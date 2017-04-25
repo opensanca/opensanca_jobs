@@ -7,6 +7,7 @@ class VacanciesController < ApplicationController
   end
 
   def new
+    raise 'testing'
     @vacancy = Vacancy.new
   end
 
