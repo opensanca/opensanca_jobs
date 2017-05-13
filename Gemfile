@@ -2,7 +2,7 @@ ruby '2.4.0'
 
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.1.0.rc1'
+gem 'rails', '~> 5.1.1'
 
 gem 'pg', '~> 0.18'
 
@@ -12,8 +12,7 @@ gem 'puma', '~> 3.7'
 gem 'coffee-rails', '~> 4.2'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
-gem 'sass-rails', github: 'rails/sass-rails'
-gem 'sprockets-commoner'
+gem 'sass-rails', '~> 5.0'
 gem 'summernote-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
