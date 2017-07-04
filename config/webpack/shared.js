@@ -1,71 +1,58 @@
-// Note: You must restart bin/webpack-watcher for changes to take effect
+// Note: You must restart bin/webpack-dev-server for changes to take effect
 
-var webpack = require('webpack')
-var path = require('path')
-var process = require('process')
-var glob = require('glob')
-var extname = require('path-complete-extname')
-var distDir = process.env.WEBPACK_DIST_DIR
+/* eslint global-require: 0 */
+/* eslint import/no-dynamic-require: 0 */
 
-if(distDir === undefined) {
-  distDir = 'packs'
-}
+const webpack = require('webpack')
+const { basename, dirname, join, relative, resolve } = require('path')
+const { sync } = require('glob')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ManifestPlugin = require('webpack-manifest-plugin')
+const extname = require('path-complete-extname')
+const { env, settings, output, loadersDir } = require('./configuration.js')
 
-config = {
-  entry: glob.sync(path.join('app', 'javascript', 'packs', '*.js*')).reduce(
-    function(map, entry) {
-      var basename = path.basename(entry, extname(entry))
-      map[basename] = path.resolve(entry)
-      return map
+const extensionGlob = `**/*{${settings.extensions.join(',')}}*`
+const entryPath = join(settings.source_path, settings.source_entry_path)
+const packPaths = sync(join(entryPath, extensionGlob))
+
+module.exports = {
+  entry: packPaths.reduce(
+    (map, entry) => {
+      const localMap = map
+      const namespace = relative(join(entryPath), dirname(entry))
+      localMap[join(namespace, basename(entry, extname(entry)))] = resolve(entry)
+      return localMap
     }, {}
   ),
 
-  output: { filename: '[name].js', path: path.resolve('public', distDir) },
+  output: {
+    filename: '[name].js',
+    path: output.path,
+    publicPath: output.publicPath
+  },
 
   module: {
-    rules: [
-      { test: /\.coffee(.erb)?$/, loader: "coffee-loader" },
-      {
-        test: /\.jsx?(.erb)?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            'react',
-            [ 'latest', { 'es2015': { 'modules': false } } ]
-          ]
-        }
-      },
-      {
-        test: /.erb$/,
-        enforce: 'pre',
-        exclude: /node_modules/,
-        loader: 'rails-erb-loader',
-        options: {
-          runner: 'DISABLE_SPRING=1 bin/rails runner'
-        }
-      },
-    ]
+    rules: sync(join(loadersDir, '*.js')).map(loader => require(loader))
   },
 
   plugins: [
-    new webpack.EnvironmentPlugin(Object.keys(process.env))
+    new webpack.EnvironmentPlugin(JSON.parse(JSON.stringify(env))),
+    new ExtractTextPlugin(env.NODE_ENV === 'production' ? '[name]-[hash].css' : '[name].css'),
+    new ManifestPlugin({
+      publicPath: output.publicPath,
+      writeToFileEmit: true
+    })
   ],
 
   resolve: {
-    extensions: [ '.js', '.coffee' ],
+    extensions: settings.extensions,
     modules: [
-      path.resolve('app/javascript'),
-      path.resolve('node_modules')
+      resolve(settings.source_path),
+      'node_modules'
     ]
   },
 
   resolveLoader: {
-    modules: [ path.resolve('node_modules') ]
+    modules: ['node_modules']
   }
-}
-
-module.exports = {
-  distDir: distDir,
-  config: config
 }

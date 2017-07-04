@@ -1,12 +1,11 @@
-// Note: You must restart bin/webpack-watcher for changes to take effect
+// Note: You must restart bin/webpack-dev-server for changes to take effect
 
-var webpack = require('webpack')
-var merge   = require('webpack-merge')
+const merge = require('webpack-merge')
+const sharedConfig = require('./shared.js')
+const { settings, output } = require('./configuration.js')
 
-var sharedConfig = require('./shared.js')
-
-module.exports = merge(sharedConfig.config, {
-  devtool: 'sourcemap',
+module.exports = merge(sharedConfig, {
+  devtool: 'cheap-eval-source-map',
 
   stats: {
     errorDetails: true
@@ -16,9 +15,18 @@ module.exports = merge(sharedConfig.config, {
     pathinfo: true
   },
 
-  plugins: [
-    new webpack.LoaderOptionsPlugin({
-      debug: true
-    })
-  ]
+  devServer: {
+    clientLogLevel: 'none',
+    https: settings.dev_server.https,
+    host: settings.dev_server.host,
+    port: settings.dev_server.port,
+    contentBase: output.path,
+    publicPath: output.publicPath,
+    compress: true,
+    headers: { 'Access-Control-Allow-Origin': '*' },
+    historyApiFallback: true,
+    watchOptions: {
+      ignored: /node_modules/
+    }
+  }
 })
