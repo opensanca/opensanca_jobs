@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:9.6.5
+    volumes:
+      - ./tmp/postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  redis:
+    image: redis
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  web:
+    build: .
+    depends_on:
+      - db
+      - redis
+    links:
+      - db
+      - redis
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/var/app
+      - gemdata:/gems
+    command: rails s -b '0.0.0.0'
+    environment:
+      DATABASE_URL: postgres://postgres:@db/
+      REDIS_URL: redis://redis:6379
+
+  jobs:
+    build: .
+    depends_on:
+      - db
+      - redis
+    links:
+      - db
+      - redis
+    volumes:
+      - .:/var/app
+      - gemdata:/gems
+    command: sidekiq -q critical,2 -q default
+    environment:
+      DATABASE_URL: postgres://postgres:@db/
+      REDIS_URL: redis://redis:6379
+
+volumes:
+  gemdata:
