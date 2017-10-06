@@ -1,6 +1,6 @@
 window.App.ApplyToJob =
   highlight_instructions: (anchor_element) ->
-    $('body').animate({
+    $('html').animate({
       scrollTop: $(anchor_element).offset().top - 60
     }, 1000)
 
