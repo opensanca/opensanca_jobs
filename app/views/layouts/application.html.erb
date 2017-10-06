@@ -25,7 +25,7 @@
   </body>
 
   <%= render "shared/footer" %>
-  <% if Rails.env.production? %>
+  <% if ENV["FULLSTORY_ENABLED"] %>
     <script>
       window['_fs_debug'] = false;
       window['_fs_host'] = 'fullstory.com';
