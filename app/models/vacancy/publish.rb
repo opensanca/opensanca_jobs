@@ -1,5 +1,5 @@
 class Vacancy::Publish
-  def initialize(worker: NotifyVacancyOnSlackWorker)
+  def initialize(worker: NotifyVacancyWorker)
     @worker = worker
   end
 
