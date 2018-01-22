@@ -39,5 +39,15 @@ describe Vacancy, type: :model do
 
       expect(result.first).to eq(newest)
     end
+
+    it "does not display jobs longer than the maximum period" do
+      max_period = Vacancy::MAX_VALID_PERIOD
+      old_job = create(:vacancy, created_at: (max_period + 1.day).ago)
+      newest  = create(:vacancy, created_at: max_period.ago)
+
+      result = described_class.recent
+
+      expect(result).to eq([newest])
+    end
   end
 end

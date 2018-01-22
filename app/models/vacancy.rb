@@ -1,9 +1,11 @@
 class Vacancy < ApplicationRecord
   include FriendlyId
 
+  MAX_VALID_PERIOD = 30.days
+
   friendly_id :slug_candidates, use: :slugged
 
-  scope :recent, -> { order(created_at: :desc) }
+  scope :recent, -> { where('created_at >= ?', MAX_VALID_PERIOD.beginning_of_day).order(created_at: :desc) }
 
   validates :job_title, :location, :description, :how_to_apply, :company_name, :company_url, :company_email,
             presence: true
