@@ -13,7 +13,7 @@ describe Vacancy::Publish, type: :model do
       end
 
       it 'enqueues the notification to slack' do
-        expect { subject }.to change(NotifyVacancyOnSlackWorker.jobs, :size).by(1)
+        expect { subject }.to change(NotifyVacancyWorker.jobs, :size).by(1)
       end
     end
 
@@ -25,7 +25,7 @@ describe Vacancy::Publish, type: :model do
       end
 
       it 'does not enqueue the notification to slack' do
-        expect { subject rescue nil }.not_to change(NotifyVacancyOnSlackWorker.jobs, :size)
+        expect { subject rescue nil }.not_to change(NotifyVacancyWorker.jobs, :size)
       end
     end
   end
