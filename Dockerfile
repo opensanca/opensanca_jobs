@@ -1,6 +1,9 @@
 FROM ruby:2.4-alpine
 MAINTAINER opensanca@opensanca.com
 
+ARG rails_env="development"
+ARG build_without=""
+
 RUN apk update \
   && apk add \
     openssl \
@@ -14,7 +17,7 @@ RUN apk update \
   && tar -xf latest.tar.gz -C /opt/yarn --strip 1 \
   && mkdir -p /var/app
 
-ENV PATH="$PATH:/opt/yarn/bin" BUNDLE_PATH="/gems" BUNDLE_JOBS=2
+ENV PATH="$PATH:/opt/yarn/bin" BUNDLE_PATH="/gems" BUNDLE_JOBS=2 RAILS_ENV=${rails_env} BUNDLE_WITHOUT=${bundle_without}
 
 COPY . /var/app
 WORKDIR /var/app
