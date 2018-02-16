@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 require 'sidekiq/testing'
 
@@ -25,7 +27,13 @@ describe Vacancy::Publish, type: :model do
       end
 
       it 'does not enqueue the notification to slack' do
-        expect { subject rescue nil }.not_to change(NotifyVacancyWorker.jobs, :size)
+        expect do
+          begin
+                   subject
+                 rescue StandardError
+                   nil
+                 end
+        end.not_to change(NotifyVacancyWorker.jobs, :size)
       end
     end
   end

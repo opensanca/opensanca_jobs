@@ -1,12 +1,14 @@
-require "rails_helper"
+# frozen_string_literal: true
 
-RSpec.feature "Visit a vacancy page", type: :feature do
-  scenario "show the vacancy information" do
+require 'rails_helper'
+
+RSpec.feature 'Visit a vacancy page', type: :feature do
+  scenario 'show the vacancy information' do
     vacancy = create(:vacancy)
 
     visit root_path
 
-    click_link I18n.t("messages.apply_for_job")
+    click_link I18n.t('messages.apply_for_job')
 
     expect(current_path).to eql(vacancy_path(vacancy))
 

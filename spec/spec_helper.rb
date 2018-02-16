@@ -1,4 +1,6 @@
-require "capybara/rspec"
+# frozen_string_literal: true
+
+require 'capybara/rspec'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

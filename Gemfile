@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ruby '2.4.2'
 
 source 'https://rubygems.org'
@@ -34,14 +36,14 @@ gem 'slack-notifier' # Send notifications to slack channels
 
 # Monitoring and error tracking
 gem 'bugsnag'
-gem 'rollbar'
 gem 'newrelic_rpm'
+gem 'rollbar'
 
 group :development, :test do
   # Code analysis
   gem 'brakeman'
   gem 'rails_best_practices'
-  gem 'rubocop-github'
+  gem 'rubocop'
 
   # Debuggging
   gem 'awesome_print'

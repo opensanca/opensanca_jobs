@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-BIN_PATH = File.expand_path(".", __dir__)
+BIN_PATH = File.expand_path('.', __dir__)
 
 Dir.chdir(BIN_PATH) do
-  exec "./webpack --watch --progress --color #{ARGV.join(" ")}"
+  exec "./webpack --watch --progress --color #{ARGV.join(' ')}"
 end

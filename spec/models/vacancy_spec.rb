@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe Vacancy, type: :model do
@@ -25,25 +27,25 @@ describe Vacancy, type: :model do
   end
 
   it 'inserts http in company_url before validate' do
-    vacancy = Vacancy.new attributes_for(:vacancy, company_url: "opensanca.com.br")
+    vacancy = Vacancy.new attributes_for(:vacancy, company_url: 'opensanca.com.br')
     vacancy.valid?
-    expect(vacancy.company_url).to eq("http://opensanca.com.br")
+    expect(vacancy.company_url).to eq('http://opensanca.com.br')
   end
 
-  describe ".recent" do
-    it "sorts the vacancies by the date from the newest to the oldest" do
-      oldest = create(:vacancy, created_at: 1.year.ago)
-      newest = create(:vacancy, created_at: 5.days.ago)
+  describe '.recent' do
+    it 'sorts the vacancies by the date from the newest to the oldest' do
+      _oldest = create(:vacancy, created_at: 1.year.ago)
+      newest  = create(:vacancy, created_at: 5.days.ago)
 
       result = described_class.recent
 
       expect(result.first).to eq(newest)
     end
 
-    it "does not display jobs longer than the maximum period" do
+    it 'does not display jobs longer than the maximum period' do
       max_period = Vacancy::MAX_VALID_PERIOD
-      old_job = create(:vacancy, created_at: (max_period + 1.day).ago)
-      newest  = create(:vacancy, created_at: max_period.ago)
+      _old_job = create(:vacancy, created_at: (max_period + 1.day).ago)
+      newest   = create(:vacancy, created_at: max_period.ago)
 
       result = described_class.recent
 

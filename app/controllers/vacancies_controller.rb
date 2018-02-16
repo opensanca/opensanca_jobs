@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class VacanciesController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_new
 
@@ -13,7 +15,7 @@ class VacanciesController < ApplicationController
   def create
     @vacancy = Vacancy.new(vacancy_params)
     Vacancy::Publish.new.publish(@vacancy)
-    flash[:success] = t(".success")
+    flash[:success] = t('.success')
     redirect_to @vacancy
   end
 

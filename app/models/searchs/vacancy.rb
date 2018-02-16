@@ -1,17 +1,21 @@
-class Searchs::Vacancy
-  def initialize(repository = ::Vacancy)
-    @repository = repository
-  end
+# frozen_string_literal: true
 
-  def list(query = nil)
-    return @repository.recent if query.blank?
+module Searchs
+  class Vacancy
+    def initialize(repository = ::Vacancy)
+      @repository = repository
+    end
 
-    query = query.split.map { |entry| "#{entry}:*" }.join(' & ')
+    def list(query = nil)
+      return @repository.recent if query.blank?
 
-    @repository.recent.where("tsv @@ to_tsquery('portuguese', :query)", query: query)
-  end
+      query = query.split.map { |entry| "#{entry}:*" }.join(' & ')
 
-  def self.list(query = nil)
-    new.list(query)
+      @repository.recent.where("tsv @@ to_tsquery('portuguese', :query)", query: query)
+    end
+
+    def self.list(query = nil)
+      new.list(query)
+    end
   end
 end

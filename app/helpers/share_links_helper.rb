@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ShareLinksHelper
   PROVIDERS = {
     facebook: { url: 'https://www.facebook.com/sharer/sharer.php?u=#current_page#', icon: 'fa-facebook-official' },

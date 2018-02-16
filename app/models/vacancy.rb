@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 class Vacancy < ApplicationRecord
   include FriendlyId
 
+  EMAIL_REGEX      = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+  URL_REGEX        = /\A^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$\Z/ix
   MAX_VALID_PERIOD = 30.days
 
   friendly_id :slug_candidates, use: :slugged
@@ -10,20 +14,18 @@ class Vacancy < ApplicationRecord
   validates :job_title, :location, :description, :how_to_apply, :company_name, :company_url, :company_email,
             presence: true
 
-  validates :company_email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
-  validates :company_url, format: { with: /\A^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$\Z/ix }
+  validates :company_email, format: { with: EMAIL_REGEX }
+  validates :company_url, format: { with: URL_REGEX }
 
   before_validation do
-    unless self.company_url.nil? || self.company_url[0, 4] == "http"
-      self.company_url = "http://#{self.company_url}"
-    end
+    self.company_url = "http://#{company_url}" unless company_url.nil? || company_url[0, 4] == 'http'
   end
 
   private
 
   def slug_candidates
     [
-      [:company_name, :job_title]
+      %i[company_name job_title]
     ]
   end
 end

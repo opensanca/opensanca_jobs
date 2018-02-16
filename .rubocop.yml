@@ -1,0 +1,15 @@
+AllCops:
+  TargetRubyVersion: 2.4.2
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+Metrics/LineLength:
+  Max: 120
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*.rb'
+Style/Documentation:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
