@@ -1,0 +1,8 @@
+pt-BR:
+  user_mailer:
+    welcome_email:
+      subject: Bem vindo ao OpenJobs!
+      welcome_message: Bem vindo ao OpenJobs, %{company}
+      intro: Você um tempo atrás anúnciou sua vaga no OpenJobs. Hoje estamos criando o login de empresas para facilitar você anúnciar suas próximas vagas e ter o controle delas.
+      finish_setup_message_html: Para finalizar a criação de sua conta, você deve entrar <a href="%{url}">nesse link</a> para configurar sua senha.
+      thanks_message: Obrigado por utilizar o OpenJobs ❤️

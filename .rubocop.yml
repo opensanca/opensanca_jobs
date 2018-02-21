@@ -1,4 +1,12 @@
 AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'bin/**/*'
+    - 'node_modules/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
   TargetRubyVersion: 2.4.2
 
 Metrics/BlockLength:

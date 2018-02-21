@@ -1,0 +1,98 @@
+@import "variables";
+$background-color: #fff;
+$field-border-color: #ebebeb;
+$field-focus-border-color: #dcdcdc;
+$selection-background-color: #b5e2e7;
+$shadow-color: rgba(0, 0, 0, 0.25);
+$title-color: #757575;
+$white: #fff;
+
+
+.other-links {
+  text-align: center;
+}
+
+.sign-box {
+  background-color: $background-color;
+  -moz-box-shadow: 0 1px 5px $shadow-color;
+  -webkit-box-shadow: 0 1px 5px $shadow-color;
+  box-shadow: 0 1px 5px $shadow-color;
+  margin: 50px auto;
+  padding: 10px;
+  width: 340px;
+
+  ::selection {
+    background-color: $selection-background-color;
+  }
+
+  ::-moz-selection {
+    background-color: $selection-background-color;
+  }
+
+  h1 {
+    color: $title-color;
+    font-size: 175%;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  h1,
+  input {
+    font-family: "Open Sans", Helvetica, sans-serif;
+  }
+
+  .field {
+    border: 0;
+    border-bottom: 2px solid $field-border-color;
+    display: block;
+    height: 50px;
+    margin: 0 auto 15px;
+    padding: 0 15px;
+    width: 75%;
+  }
+
+  .field:focus {
+    border-bottom-color: $primary-color;
+    outline: none;
+  }
+
+  .field:hover {
+    border-bottom-color: $field-focus-border-color;
+  }
+
+  .field:invalid {
+    box-shadow: none;
+  }
+
+  .field:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px $white inset;
+  }
+
+  .btn-sign {
+    background-color: $primary-color;
+    border: 0;
+    box-shadow: 0 5px 0 $dark-primary-color;
+    color: $white;
+    display: block;
+    height: 50px;
+    margin: 30px auto;
+    position: relative;
+    width: 85%;
+  }
+
+  .btn-sign:hover {
+    -moz-box-shadow: 0 3px 0 $dark-primary-color;
+    -webkit-box-shadow: 0 3px 0 $dark-primary-color;
+    box-shadow: 0 3px 0 $dark-primary-color;
+    top: 2px;
+  }
+
+  .btn-sign:active {
+    box-shadow: none;
+    top: 5px;
+  }
+
+  .btn-sign:focus {
+    outline: none;
+  }
+}

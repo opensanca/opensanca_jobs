@@ -1,0 +1,14 @@
+<h1>Cadastro de usuário</h1>
+
+<%= form.text_field :email, autofocus: true, class: 'field', type: 'email', placeholder: User.human_attribute_name('email') %>
+
+<%= form.password_field :password, class: 'field', placeholder: User.human_attribute_name('password') %>
+
+<br/>
+
+<h1>Dados da Empresa:</h1>
+
+<%= form.fields_for :company, @user.company || @user.build_company do |company_form| %>
+  <%= company_form.text_field :name, class: 'field', placeholder: 'Nome da empresa'%>
+  <%= company_form.text_field :url,  class: 'field', placeholder: 'URL da empresa'%>
+<% end %>

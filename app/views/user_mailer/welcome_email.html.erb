@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= t('.welcome_message', company: @user.company_name) %></h1>
+    <p>
+      <%= t('.intro') %>
+    </p>
+    <p>
+      <%= t('.finish_setup_message_html', url: edit_user_password_url(@user, token: @user.confirmation_token.html_safe)) %>
+    </p>
+    <p><%= t('.thanks_message') %></p>
+  </body>
+</html>

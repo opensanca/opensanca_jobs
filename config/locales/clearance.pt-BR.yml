@@ -1,0 +1,53 @@
+pt-BR:
+  clearance:
+    models:
+      clearance_mailer:
+        change_password: Troque sua senha
+  clearance_mailer:
+    change_password:
+      closing: Se você não solicitou isso, ignore esse email. Sua senha não foi trocada.
+      link_text: Trocar minha senha
+      opening: "Você solicitou um link para resetar sua senha:"
+  flashes:
+    failure_after_create: Email ou senha inválidos.
+    failure_after_update: Senha não pode ser vazia.
+    failure_when_forbidden: Por favor, confirme a URL ou tente submeter o formulário novamente.
+    failure_when_not_signed_in: Por favor, faça login para continuar.
+  helpers:
+    label:
+      password:
+        email: E-mail
+      password_reset:
+        password: Escolha sua nova senha
+    submit:
+      password:
+        submit: Trocar senha
+      password_reset:
+        submit: Salvar senha
+      session:
+        submit: Login
+      user:
+        create: Registrar
+  layouts:
+    application:
+      sign_in: Login
+      sign_out: Logout
+  passwords:
+    create:
+      description: Você irá receber um email nos próximos mínutos contendo as instruções para trocar sua senha.
+    edit:
+      description: Escolha uma nova senha.
+      title: Troque sua senha
+    new:
+      description: Para receber o link para trocar sua senha, digite seu email.
+      title: Resetar sua senha
+  sessions:
+    form:
+      forgot_password: Esqueceu sua senha?
+      sign_up: Registrar
+    new:
+      title: Login
+  users:
+    new:
+      sign_in: Login
+      title: Registrar

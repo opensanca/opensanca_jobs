@@ -13,7 +13,8 @@ describe Searchs::Vacancy, type: :search do
     end
 
     context 'with parameter' do
-      let!(:vacancy)       { create(:vacancy, job_title: 'programador ruby') }
+      let(:company)        { create(:company, name: 'Galactic Empire') }
+      let!(:vacancy)       { create(:vacancy, job_title: 'programador ruby', company: company) }
       let!(:other_vacancy) { create(:vacancy, job_title: 'programador java') }
 
       subject { Searchs::Vacancy.list(keyword) }
@@ -26,6 +27,12 @@ describe Searchs::Vacancy, type: :search do
 
       context 'with a similar keyword' do
         let(:keyword) { 'programadores ruby' }
+
+        it { is_expected.to eq([vacancy]) }
+      end
+
+      context 'with company name' do
+        let(:keyword) { 'Galactic Empire' }
 
         it { is_expected.to eq([vacancy]) }
       end

@@ -94,4 +94,14 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   Rails.application.routes.default_url_options[:host] = 'openjobs.me'
+  config.action_mailer.default_url_options = { host: 'openjobs.me' }
+  ActionMailer::Base.smtp_settings = {
+    port:           ENV['SMTP_PORT'],
+    address:        ENV['SMTP_SERVER'],
+    user_name:      ENV['SMTP_LOGIN'],
+    password:       ENV['SMTP_PASSWORD'],
+    domain:         ENV['SMTP_DOMAIN'],
+    authentication: ENV['SMTP_AUTHENTICATION'].try(:to_sym)
+  }
+  ActionMailer::Base.delivery_method = :smtp
 end

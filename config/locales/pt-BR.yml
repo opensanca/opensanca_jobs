@@ -1,4 +1,7 @@
 pt-BR:
+  shared:
+    navbar:
+      sign_out: Logout
   menu:
     all_vacancies: "Todas as vagas"
   metatags:

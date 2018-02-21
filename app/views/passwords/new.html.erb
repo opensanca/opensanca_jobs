@@ -1,0 +1,15 @@
+<div id="clearance" class="sign-up">
+  <div class="login-container">
+    <div class="sign-box">
+      <h1><%= t(".title") %></h1>
+
+      <small><%= t(".description") %></small>
+
+      <%= form_for :password, url: passwords_path do |form| %>
+        <%= form.text_field :email, autofocus: true, class: 'field', type: 'email', placeholder: User.human_attribute_name('email') %>
+
+        <%= form.submit class: 'btn btn-sign' %>
+      <% end %>
+    </div>
+  </div>
+</div>
