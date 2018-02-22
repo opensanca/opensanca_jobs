@@ -1,0 +1,14 @@
+<div id="clearance" class="sign-up">
+  <div class="login-container">
+    <div class="sign-box">
+      <h1><%= t(".title") %></h1>
+
+      <%= form_for :password_reset, url: user_password_path(@user, token: @user.confirmation_token),
+            html: { method: :put } do |form| %>
+        <%= form.password_field :password, autofocus: true, class: 'field', placeholder: t('helpers.label.password_reset.password') %>
+
+        <%= form.submit class: 'btn btn-sign' %>
+      <% end %>
+    </div>
+  </div>
+</div>

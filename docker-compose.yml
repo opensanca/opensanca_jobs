@@ -36,6 +36,7 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:@db/
       REDIS_URL: redis://redis:6379
+      SMTP_ADDRESS: mail
 
   jobs:
     build: .
@@ -52,6 +53,12 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:@db/
       REDIS_URL: redis://redis:6379
+      SMTP_ADDRESS: mail
+
+  mail:
+    image: mailhog/mailhog:latest
+    ports:
+      - 8025:8025
 
 volumes:
   gemdata:

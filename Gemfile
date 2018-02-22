@@ -19,6 +19,9 @@ gem 'summernote-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
+# Authentication
+gem 'clearance'
+
 # Json generation
 gem 'jbuilder', '~> 2.5'
 

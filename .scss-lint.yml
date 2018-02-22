@@ -241,10 +241,7 @@ linters:
     properties: []
 
   VendorPrefix:
-    enabled: true
-    identifier_list: base
-    additional_identifiers: []
-    excluded_identifiers: []
+    enabled: false
 
   ZeroUnit:
     enabled: true

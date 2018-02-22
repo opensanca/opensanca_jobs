@@ -15,6 +15,9 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="<%= menu_class(root_path) %>"><%= link_to t("menu.all_vacancies"), root_path %></li>
+        <% if signed_in? %>
+          <li><%= link_to t(".sign_out"), sign_out_path, method: :delete %></li>
+        <% end %>
       </ul>
 
       <%= form_tag vacancies_path, class: "navbar-form navbar-right", method: :get do %>

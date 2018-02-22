@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class VacanciesController < ApplicationController
+  before_action :require_login, except: %i[index show]
+
   rescue_from ActiveRecord::RecordInvalid, with: :render_new
 
   def index
@@ -13,7 +15,7 @@ class VacanciesController < ApplicationController
   end
 
   def create
-    @vacancy = Vacancy.new(vacancy_params)
+    @vacancy = current_company.vacancies.new(vacancy_params)
     Vacancy::Publish.new.publish(@vacancy)
     flash[:success] = t('.success')
     redirect_to @vacancy

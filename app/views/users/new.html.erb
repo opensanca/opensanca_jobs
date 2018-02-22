@@ -1,0 +1,28 @@
+<div id="clearance" class="sign-up">
+  <div class="login-container">
+    <div class="sign-box">
+      <% if @user.errors.any? %>
+        <ul class="error_list">
+          <% @user.errors.full_messages.each do |msg| %>
+            <li class="alert-error">
+              <%= msg %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+
+
+      <%= form_for @user do |form| %>
+        <%= render partial: '/users/form', object: form %>
+
+        <div class="submit-field">
+          <%= form.submit class: 'btn btn-sign' %>
+        </div>
+
+        <div class="other-links">
+          <%= link_to t(".sign_in"), sign_in_path %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

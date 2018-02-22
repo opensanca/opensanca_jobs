@@ -1,10 +1,13 @@
 $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
+$error-color: #b94a48;
+$error-background-color: #f2dede;
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "summernote";
 @import "apply_to_job";
+@import "login";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 @import "footer";
@@ -148,7 +151,7 @@ body {
 }
 
 .btn-register-vacancy {
-  background-color:#ff6f27;
+  background-color: $primary-color;
   width: 300px;
   height: 35px;
   border-radius: 5px;
@@ -214,4 +217,10 @@ body {
   .vertical-25 {
     margin-top: 0;
   }
+}
+
+.error-list {
+  background-color: $error-background-color;
+  border: 1px solid $error-color;
+  color: $error-color;
 }

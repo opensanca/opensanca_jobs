@@ -2,7 +2,7 @@
 
 module Searchs
   class Vacancy
-    def initialize(repository = ::Vacancy)
+    def initialize(repository = ::Vacancy.joins(:company).recent)
       @repository = repository
     end
 
@@ -11,7 +11,9 @@ module Searchs
 
       query = query.split.map { |entry| "#{entry}:*" }.join(' & ')
 
-      @repository.recent.where("tsv @@ to_tsquery('portuguese', :query)", query: query)
+      @repository.where(<<~SQL, query: query)
+        tsv @@ to_tsquery('portuguese', :query) OR company_tsv @@ to_tsquery('portuguese', :query)
+      SQL
     end
 
     def self.list(query = nil)

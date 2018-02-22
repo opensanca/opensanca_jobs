@@ -1,0 +1,13 @@
+pt-BR:
+  activerecord:
+    models:
+      user: Usuário
+    attributes:
+      user:
+        email: E-mail
+        password: Senha
+        company: Empresa
+      company:
+        name: Nome da Empresa
+        url: Site da Empresa
+
