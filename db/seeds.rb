@@ -10,12 +10,16 @@ require 'faker'
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do |_i|
-  company = Company.create!(company_name: Faker::Company.name,
-                            company_url: Faker::Internet.url,
-                            company_email: Faker::Internet.email)
+  company = Company.create!(name: Faker::Company.name,
+                            url: Faker::Internet.url)
+
+  User.create!(email: Faker::Internet.email(company.name),
+               password: Faker::Internet.password,
+               company: company)
+
   Vacancy.create!(job_title: Faker::Company.profession,
                   location: Faker::Address.city,
                   description: Faker::Hipster.sentence,
-                  how_to_apply: Faker::Hipster.sentence
+                  how_to_apply: Faker::Hipster.sentence,
                   company: company)
 end
