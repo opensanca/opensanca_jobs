@@ -1,4 +1,5 @@
-FROM ruby:2.4-alpine
+FROM ruby:2.5.0-alpine
+
 MAINTAINER opensanca@opensanca.com
 
 ARG rails_env="development"

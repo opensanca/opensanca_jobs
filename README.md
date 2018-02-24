@@ -9,7 +9,7 @@
 ### Dependencies
 
 #### Ruby Version
-The application uses Ruby 2.4.1. You should install it to run the application. (for development we recommend to use [RVM](https://rvm.io/))
+The application uses Ruby 2.5.0. You should install it to run the application. (for development we recommend to use [RVM](https://rvm.io/))
 
 #### Database
 
