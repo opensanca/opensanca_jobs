@@ -3,6 +3,8 @@ version: '3'
 services:
   db:
     image: postgres:9.6.5
+    ports:
+      - "5432"
     volumes:
       - ./tmp/postgres_data:/var/lib/postgresql/data
     healthcheck:
