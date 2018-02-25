@@ -31,7 +31,7 @@ pt-BR:
       description:     "Descrição da vaga"
       how_to_apply:    "Como os candidatos devem se aplicar para a vaga?"
       job_title:       "Título da vaga"
-      location:        "Local"
+      location:        "Cidade"
       submit_vacancy:  "Enviar vaga"
 
       company_name:  "Nome"
