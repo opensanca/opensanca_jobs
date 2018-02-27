@@ -7,7 +7,7 @@ AllCops:
     - 'node_modules/**/*'
     - 'db/**/*'
     - 'config/**/*'
-  TargetRubyVersion: 2.4.2
+  TargetRubyVersion: 2.5.0
 
 Metrics/BlockLength:
   Exclude:

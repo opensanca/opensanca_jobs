@@ -1,5 +1,6 @@
-FROM ruby:2.4-alpine
-MAINTAINER opensanca@opensanca.com
+FROM ruby:2.5.0-alpine
+
+LABEL maintainer="opensanca@opensanca.com"
 
 ARG rails_env="development"
 ARG build_without=""
