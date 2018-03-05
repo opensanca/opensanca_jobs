@@ -43,4 +43,6 @@ Rails.application.configure do
   Rails.application.routes.default_url_options[:host] = 'localhost:3000'
 
   config.middleware.use Clearance::BackDoor
+
+  config.i18n.default_locale = :en
 end
