@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180221233924) do
+ActiveRecord::Schema.define(version: 20180305210520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,18 +41,13 @@ ActiveRecord::Schema.define(version: 20180221233924) do
     t.string "job_title"
     t.string "location"
     t.text "description"
-    t.string "company_name"
-    t.string "company_url"
-    t.string "company_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "how_to_apply", null: false
     t.string "slug"
     t.tsvector "tsv"
     t.integer "company_id"
-    t.index ["company_email"], name: "index_vacancies_on_company_email"
     t.index ["company_id"], name: "index_vacancies_on_company_id"
-    t.index ["company_url"], name: "index_vacancies_on_company_url"
     t.index ["location"], name: "index_vacancies_on_location"
     t.index ["slug"], name: "index_vacancies_on_slug", unique: true
     t.index ["tsv"], name: "index_vacancies_on_tsv", using: :gin
