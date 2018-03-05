@@ -17,6 +17,7 @@
         <li class="<%= menu_class(root_path) %>"><%= link_to t("menu.all_vacancies"), root_path %></li>
         <% if signed_in? %>
           <li><%= link_to t(".sign_out"), sign_out_path, method: :delete %></li>
+          <li><%= link_to t(".my_vacancies"), company_vacancies_path, method: :get %></li>
         <% end %>
       </ul>
 

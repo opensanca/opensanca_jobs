@@ -1,10 +1,15 @@
 en:
+  shared:
+    navbar:
+      sign_out: Logout
+      my_vacancies: "My Vacancies"
   menu:
     all_vacancies: "All Vacancies"
   metatags:
     vacancy_description: '%{job_title} - %{company_name} in %{location}.'
   messages:
     apply_for_job: "Apply for job"
+    edit_vacancy: "Edit"
 
   vacancies:
     index:
@@ -37,6 +42,17 @@ en:
     create:
       success: "Vacancy posted with success."
     search: "Search"
+    edit:
+      vacancies: "Vacancies List"
+      edit_vacancies: "Edit Vacancy"
+      company_details: "Details about the company"
+      description:     "Description"
+      how_to_apply:    "How do candidates apply to the vacancy?"
+      job_title:       "Job Title"
+      location:        "Location"
+      dont_belongs_to_you: "Vacancy don't belongs to YOUR Company"
+    update:
+      success: "Vacancy updated."
 
   users:
     form:
@@ -47,3 +63,4 @@ en:
     submit:
       vacancy:
         create: "Post vacancy"
+        update: "Update vacancy"

@@ -2,12 +2,14 @@ pt-BR:
   shared:
     navbar:
       sign_out: Logout
+      my_vacancies: "Minhas Vagas"
   menu:
     all_vacancies: "Todas as vagas"
   metatags:
     vacancy_description: '%{job_title} - %{company_name} em %{location}.'
   messages:
     apply_for_job: "Aplicar"
+    edit_vacancy: "Editar"
 
   vacancies:
     index:
@@ -40,6 +42,16 @@ pt-BR:
     create:
       success: "Vaga enviada com sucesso."
     search: "Pesquisar"
+    edit:
+      vacancies: "Lista de vagas anunciadas"
+      edit_vacancies: "Editar Vaga"
+      description:     "Descrição da vaga"
+      how_to_apply:    "Como os candidatos devem se aplicar para a vaga?"
+      job_title:       "Título da vaga"
+      location:        "Cidade"
+      dont_belongs_to_you: "Esta vaga não pertence a SUA empresa"
+    update:
+      success: "Vaga atualizada."
 
   users:
     form:
@@ -50,3 +62,4 @@ pt-BR:
     submit:
       vacancy:
         create: "Enviar vaga"
+        update: "Atualizar vaga"

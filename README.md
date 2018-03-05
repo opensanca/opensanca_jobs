@@ -49,6 +49,16 @@ If needed, you should configure the `config/database.yml` file.
 
 ##### Redis
 
+We use [Redis](https://redis.io/) for asynchronous jobs.
+
+> Tip - Try Docker containers.
+>
+> You can use Docker to startup Redis.
+> ```bash
+> $ docker run --name redis -p 6379:6379 -d redis
+> ``` 
+
+
 ##### Mail server
 
 For local development, we suggest to use Mailhog (https://github.com/mailhog/MailHog) or Mailcatcher (https://mailcatcher.me/)
