@@ -2,7 +2,7 @@
   <div class="login-container">
     <div class="sign-box">
       <% if @user.errors.any? %>
-        <ul class="error_list">
+        <ul class="error-list">
           <% @user.errors.full_messages.each do |msg| %>
             <li class="alert-error">
               <%= msg %>
