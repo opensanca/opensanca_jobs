@@ -1,0 +1,12 @@
+en:
+  activerecord:
+    models:
+      user: User
+    attributes:
+      user:
+        email: E-mail
+        password: Password
+        company: Company
+      company:
+        name: Company name
+        url: Company website

@@ -10,7 +10,7 @@ describe UserMailer, type: :mailer do
     let(:email) { described_class.welcome_email(user) }
 
     it 'renders the headers' do
-      expect(email.subject).to eq('Bem vindo ao OpenJobs!')
+      expect(email.subject).to eq('Welcome to OpenJobs!')
       expect(email.to).to eq([user.email])
       expect(email.from).to eq(['no-reply@openjobs.me'])
     end
@@ -18,7 +18,7 @@ describe UserMailer, type: :mailer do
     context 'body' do
       subject { email.body.encoded }
 
-      it { is_expected.to match('Bem vindo ao OpenJobs, Galactic Empire') }
+      it { is_expected.to match('Welcome to OpenJobs, Galactic Empire') }
     end
   end
 end

@@ -23,6 +23,8 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
 end
 
+Capybara.default_driver = ENV.fetch('CAPYBARA_DRIVER') { 'rack_test' }.to_sym
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec

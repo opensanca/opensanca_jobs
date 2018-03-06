@@ -41,6 +41,11 @@ pt-BR:
       success: "Vaga enviada com sucesso."
     search: "Pesquisar"
 
+  users:
+    form:
+      company_data: 'Dados da Empresa'
+      title: 'Cadastro de usuário'
+
   helpers:
     submit:
       vacancy:

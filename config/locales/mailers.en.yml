@@ -1,0 +1,8 @@
+en:
+  user_mailer:
+    welcome_email:
+      subject: Welcome to OpenJobs!
+      welcome_message: Welcome to OpenJobs, %{company}
+      intro: You did post your job on Openjobs sometime ago. Today we are creating the company login area, so it will help you publish your next jobs and manage them.
+      finish_setup_message_html: To finish your account setup, you should visit <a href="%{url}">this link</a> to setup your password.
+      thanks_message: Thanks for using OpenJobs ❤️

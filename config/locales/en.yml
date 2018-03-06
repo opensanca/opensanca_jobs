@@ -36,6 +36,12 @@ en:
       company_email: "E-mail"
     create:
       success: "Vacancy posted with success."
+    search: "Search"
+
+  users:
+    form:
+      company_data: 'Company information'
+      title: 'User Registration'
 
   helpers:
     submit:
