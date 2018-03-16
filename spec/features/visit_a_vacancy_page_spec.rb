@@ -8,6 +8,8 @@ RSpec.feature 'Visit a vacancy page', type: :feature do
 
     visit root_path
 
+    click_link vacancy.job_title
+
     expect(current_path).to eql(vacancy_path(vacancy))
 
     expect(page).to have_content(vacancy.job_title)
