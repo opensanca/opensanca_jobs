@@ -28,11 +28,9 @@ describe Vacancy::Publish, type: :model do
 
       it 'does not enqueue the notification to slack' do
         expect do
-          begin
-                   subject
-                 rescue StandardError
-                   nil
-                 end
+          subject
+        rescue StandardError
+          nil
         end.not_to change(NotifyVacancyWorker.jobs, :size)
       end
     end
