@@ -18,11 +18,11 @@ RSpec.feature 'Registration', type: :feature do
     click_on 'Sign up'
 
     expect(page).to have_text 'Submit your vacancy'
-    expect(page).to have_text 'Sign Out'
+    expect(page).to have_text 'Logout'
 
     # Try to login with the same informations
 
-    click_on 'Sign Out'
+    click_on 'Logout'
 
     expect(page).to have_text 'Sign in'
 
@@ -31,7 +31,7 @@ RSpec.feature 'Registration', type: :feature do
 
     click_on 'Sign in'
 
-    expect(page).to have_text 'Sign Out'
+    expect(page).to have_text 'Logout'
   end
 
   scenario 'registering with an existing email' do
