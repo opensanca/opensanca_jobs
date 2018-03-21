@@ -50,7 +50,7 @@ en:
       how_to_apply:    "How do candidates apply to the vacancy?"
       job_title:       "Job Title"
       location:        "Location"
-      dont_belongs_to_you: "Vacancy don't belongs to YOUR Company"
+      dont_belongs_to_you: "This vacancy don't belongs to your Company."
     update:
       success: "Vacancy updated."
 

@@ -49,7 +49,7 @@ pt-BR:
       how_to_apply:    "Como os candidatos devem se aplicar para a vaga?"
       job_title:       "Título da vaga"
       location:        "Cidade"
-      dont_belongs_to_you: "Esta vaga não pertence a SUA empresa"
+      dont_belongs_to_you: "Esta vaga não pertence a sua empresa."
     update:
       success: "Vaga atualizada."
 
