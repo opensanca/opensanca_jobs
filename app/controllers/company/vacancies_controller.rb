@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Company
   class VacanciesController < ApplicationController
     before_action :require_login

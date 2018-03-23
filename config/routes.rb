@@ -25,8 +25,6 @@ Rails.application.routes.draw do
 
   resources :vacancies
 
-  #resources :vacancies, module: 'company', only: [:index]
-
   namespace :company do
     resources :vacancies, only: [:index]
   end

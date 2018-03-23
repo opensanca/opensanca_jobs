@@ -55,12 +55,12 @@ group :development, :test do
 
   # Testing
   gem 'capybara'
+  gem 'chromedriver-helper'
   gem 'factory_girl_rails'
   gem 'fuubar'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
-  gem 'chromedriver-helper'
 
   # environment variables
   gem 'dotenv-rails'

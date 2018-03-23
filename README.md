@@ -73,7 +73,7 @@ $ bin/setup
 
 Run the tests
 ```
-$ RAILS_ENV=test rake db:drop db:create db:migrate; rspec
+$ rspec .
 ```
 
 Start the app:
