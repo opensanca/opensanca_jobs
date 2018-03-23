@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-class Company
-  class VacanciesController < ApplicationController
-    before_action :require_login
+class Company::VacanciesController < ApplicationController # rubocop:disable Style/ClassAndModuleChildren
+  before_action :require_login
 
-    def index
-      @vacancies = current_company.vacancies
-    end
+  def index
+    @vacancies = current_company.vacancies
   end
 end
