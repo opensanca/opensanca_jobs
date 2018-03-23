@@ -16,7 +16,7 @@ Rollbar.configure do |config|
   # config.person_username_method = "my_username"
   # config.person_email_method = "my_email"
 
-  config.person_method          = 'current_company'
+  config.person_method          = 'current_user'
   config.person_username_method = 'email'
 
   # If you want to attach custom data to all exception and message reports,
