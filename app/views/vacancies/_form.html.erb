@@ -1,0 +1,29 @@
+<%= form_for vacancy do |f| %>
+  <div class="form-group">
+    <%= f.label :job_title, t('.job_title') %>
+    <%= f.text_field :job_title, class: 'form-control' %>
+    <%= error_tag vacancy, :job_title %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :location, t('.location') %>
+    <%= f.text_field :location, class: 'form-control' %>
+    <%= error_tag vacancy, :location %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, t('.description') %>
+    <%= f.text_area :description, rows: 15, class: 'form-control', 'data-provider' => 'summernote' %>
+    <%= error_tag vacancy, :description %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :how_to_apply, t('.how_to_apply') %>
+    <%= f.text_area :how_to_apply, rows: 5, class: 'form-control' %>
+    <%= error_tag vacancy, :how_to_apply %>
+  </div>
+
+  <div class="text-right">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

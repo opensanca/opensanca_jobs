@@ -11,11 +11,11 @@ RSpec.feature 'User register a Vacancy' do
 
       click_link I18n.t('vacancies.index.advertise_message')
 
-      fill_in I18n.t('vacancies.new.job_title'),    with: 'Stormtrooper'
-      fill_in I18n.t('vacancies.new.location'),     with: 'Death Star'
-      fill_in I18n.t('vacancies.new.description'),
+      fill_in I18n.t('vacancies.form.job_title'),    with: 'Stormtrooper'
+      fill_in I18n.t('vacancies.form.location'),     with: 'Death Star'
+      fill_in I18n.t('vacancies.form.description'),
               with: 'You will handle the security of the Death Star. You do not need to be a good shooter'
-      fill_in I18n.t('vacancies.new.how_to_apply'),
+      fill_in I18n.t('vacancies.form.how_to_apply'),
               with: 'Send an email to hr@theempire.com with your CV and a cover letter.'
 
       click_button I18n.t('helpers.submit.vacancy.create')

@@ -2,12 +2,14 @@ pt-BR:
   shared:
     navbar:
       sign_out: Logout
+      my_vacancies: "Minhas Vagas"
   menu:
     all_vacancies: "Todas as vagas"
   metatags:
     vacancy_description: '%{job_title} - %{company_name} em %{location}.'
   messages:
     apply_for_job: "Aplicar"
+    edit_vacancy: "Editar"
 
   vacancies:
     index:
@@ -15,6 +17,7 @@ pt-BR:
       no_vacancies:         "Desculpe, nenhuma vaga disponível 😔"
       title:                "Todas as vagas"
       welcome_message_html: "Encontre as melhores vagas! <br> Encontre os profissionais certos para sua empresa!"
+      vacancies: "Lista de vagas anunciadas"
     show:
       apply_help_html: >
                  <li>  Encontre uma vaga, pesquise seus requisitos e garata que os cumpra.</li>
@@ -26,20 +29,21 @@ pt-BR:
       how_to_apply:    "Como se candidatar"
       job_description: "Descrição da vaga"
       recommend:       "Recomendar vaga"
-    new:
-      company_details: "Detalhes sobre a empresa"
+    form:
       description:     "Descrição da vaga"
       how_to_apply:    "Como os candidatos devem se aplicar para a vaga?"
       job_title:       "Título da vaga"
       location:        "Cidade"
+    new:
       submit_vacancy:  "Enviar vaga"
-
-      company_name:  "Nome"
-      company_url:   "URL"
-      company_email: "E-mail"
     create:
       success: "Vaga enviada com sucesso."
     search: "Pesquisar"
+    edit:
+      edit_vacancies: "Editar Vaga"
+      submit_vacancy:  "Atualizar vaga"
+    update:
+      success: "Vaga atualizada."
 
   users:
     form:
@@ -50,3 +54,4 @@ pt-BR:
     submit:
       vacancy:
         create: "Enviar vaga"
+        update: "Atualizar vaga"

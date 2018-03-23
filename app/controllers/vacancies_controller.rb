@@ -25,6 +25,16 @@ class VacanciesController < ApplicationController
     @vacancy = Vacancy.friendly.find(params[:id])
   end
 
+  def edit
+    @vacancy = current_company.vacancies.friendly.find(params[:id])
+  end
+
+  def update
+    @vacancy = current_company.vacancies.friendly.find(params[:id])
+    @vacancy.update_attributes!(vacancy_params)
+    redirect_to @vacancy
+  end
+
   private
 
   def render_new

@@ -55,6 +55,7 @@ group :development, :test do
 
   # Testing
   gem 'capybara'
+  gem 'chromedriver-helper'
   gem 'factory_girl_rails'
   gem 'fuubar'
   gem 'rspec-rails'

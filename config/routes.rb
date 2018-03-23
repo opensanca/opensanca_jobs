@@ -23,7 +23,11 @@ Rails.application.routes.draw do
   delete '/sign_out' => 'clearance/sessions#destroy', as: 'sign_out'
   get '/sign_up' => 'clearance/users#new', as: 'sign_up'
 
-  resources :vacancies, except: %i[edit update destroy]
+  resources :vacancies
+
+  namespace :company do
+    resources :vacancies, only: [:index]
+  end
 
   root to: 'vacancies#index'
 end

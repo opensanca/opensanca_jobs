@@ -21,6 +21,14 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.filter_rails_from_backtrace!
+
+  config.around(:each, type: :feature) do |example|
+    Rails.application.config.action_dispatch.show_exceptions = true
+    Rails.application.config.consider_all_requests_local = false
+    example.run
+    Rails.application.config.action_dispatch.show_exceptions = false
+    Rails.application.config.consider_all_requests_local = true
+  end
 end
 
 Capybara.default_driver = ENV.fetch('CAPYBARA_DRIVER') { 'rack_test' }.to_sym
