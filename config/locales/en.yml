@@ -29,28 +29,21 @@ en:
       how_to_apply:    "How to apply"
       job_description: "Job Description"
       recommend:       "Recommend this vacancy"
-    new:
-      company_details: "Details about the company"
+    form:
       description:     "Description"
       how_to_apply:    "How do candidates apply to the vacancy?"
       job_title:       "Job Title"
       location:        "Location"
+    new:
+      company_details: "Details about the company"
       submit_vacancy:  "Submit your vacancy"
-
-      company_name:  "Name"
-      company_url:   "URL"
-      company_email: "E-mail"
     create:
       success: "Vacancy posted with success."
     search: "Search"
     edit:
       edit_vacancies: "Edit Vacancy"
       company_details: "Details about the company"
-      description:     "Description"
-      how_to_apply:    "How do candidates apply to the vacancy?"
-      job_title:       "Job Title"
-      location:        "Location"
-      dont_belongs_to_you: "This vacancy don't belongs to your Company."
+      submit_vacancy:  "Update your vacancy"
     update:
       success: "Vacancy updated."
 

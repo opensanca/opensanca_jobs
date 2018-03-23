@@ -8,9 +8,9 @@
       "message": "Render path contains parameter value",
       "file": "app/views/vacancies/index.html.erb",
       "line": 18,
-      "link": "http://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
+      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
       "code": "render(action => Searchs::Vacancy.list(params[:search]), {})",
-      "render_path": [{"type":"controller","class":"VacanciesController","method":"index","line":5,"file":"app/controllers/vacancies_controller.rb"}],
+      "render_path": [{"type":"controller","class":"VacanciesController","method":"index","line":11,"file":"app/controllers/vacancies_controller.rb"}],
       "location": {
         "type": "template",
         "template": "vacancies/index"
@@ -18,8 +18,47 @@
       "user_input": "params[:search]",
       "confidence": "Weak",
       "note": ""
+    },
+    {
+      "warning_type": "Redirect",
+      "warning_code": 18,
+      "fingerprint": "5d7093883303d3859497b033f0ca18601e456327c0878e8d367b82b0034d03ae",
+      "check_name": "Redirect",
+      "message": "Possible unprotected redirect",
+      "file": "app/controllers/vacancies_controller.rb",
+      "line": 35,
+      "link": "https://brakemanscanner.org/docs/warning_types/redirect/",
+      "code": "redirect_to(current_company.vacancies.friendly.find(params[:id]))",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "VacanciesController",
+        "method": "update"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 4,
+      "fingerprint": "9f491becb2cbae68d5b3998639580f8acd2687788ffec1dae12a910360abe874",
+      "check_name": "LinkToHref",
+      "message": "Potentially unsafe model attribute in link_to href",
+      "file": "app/views/vacancies/show.html.erb",
+      "line": 19,
+      "link": "https://brakemanscanner.org/docs/warning_types/link_to_href",
+      "code": "link_to(Vacancy.friendly.find(params[:id]).company_url, Vacancy.friendly.find(params[:id]).company_url, :target => \"blank\")",
+      "render_path": [{"type":"controller","class":"VacanciesController","method":"show","line":26,"file":"app/controllers/vacancies_controller.rb"}],
+      "location": {
+        "type": "template",
+        "template": "vacancies/show"
+      },
+      "user_input": "Vacancy.friendly.find(params[:id]).company_url",
+      "confidence": "Weak",
+      "note": ""
     }
   ],
-  "updated": "2017-03-10 11:43:36 -0300",
-  "brakeman_version": "3.5.0"
+  "updated": "2018-03-23 14:16:51 -0300",
+  "brakeman_version": "4.2.0"
 }

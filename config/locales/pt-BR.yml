@@ -29,27 +29,19 @@ pt-BR:
       how_to_apply:    "Como se candidatar"
       job_description: "Descrição da vaga"
       recommend:       "Recomendar vaga"
-    new:
-      company_details: "Detalhes sobre a empresa"
+    form:
       description:     "Descrição da vaga"
       how_to_apply:    "Como os candidatos devem se aplicar para a vaga?"
       job_title:       "Título da vaga"
       location:        "Cidade"
+    new:
       submit_vacancy:  "Enviar vaga"
-
-      company_name:  "Nome"
-      company_url:   "URL"
-      company_email: "E-mail"
     create:
       success: "Vaga enviada com sucesso."
     search: "Pesquisar"
     edit:
       edit_vacancies: "Editar Vaga"
-      description:     "Descrição da vaga"
-      how_to_apply:    "Como os candidatos devem se aplicar para a vaga?"
-      job_title:       "Título da vaga"
-      location:        "Cidade"
-      dont_belongs_to_you: "Esta vaga não pertence a sua empresa."
+      submit_vacancy:  "Atualizar vaga"
     update:
       success: "Vaga atualizada."
 
