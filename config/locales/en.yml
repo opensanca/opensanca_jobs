@@ -17,6 +17,7 @@ en:
       no_vacancies:         "Sorry, no vacancies posted 😔"
       title:                "All Vacancies"
       welcome_message_html: "Find the best job offers! <br> Find the ideal professional for your company!"
+      vacancies: "Vacancies List"
     show:
       apply_help_html: >
                  <li>  Find a job, research the requirements and ensure that you meet them.</li>
@@ -43,7 +44,6 @@ en:
       success: "Vacancy posted with success."
     search: "Search"
     edit:
-      vacancies: "Vacancies List"
       edit_vacancies: "Edit Vacancy"
       company_details: "Details about the company"
       description:     "Description"
