@@ -30,7 +30,7 @@ class VacanciesController < ApplicationController
   end
 
   def update
-    @vacancy = Vacancy.friendly.find(params[:id])
+    @vacancy = current_company.vacancies.friendly.find(params[:id])
     @vacancy.update_attributes!(vacancy_params)
     redirect_to @vacancy
   end
