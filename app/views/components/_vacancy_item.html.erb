@@ -1,0 +1,29 @@
+<%#
+Vacancy Item
+
+Provide a card containing job's information, when clicked it gets redirected to the URL specified in the parameter.
+
+@param vacancy [Vacancy] * the vacancy object.
+@param link [String] * the string containing the URL that will be redirected when the section is clicked.
+%>
+
+<section class="vacancy-item ">
+  <%= link_to link do %>
+    <div class="row">
+      <div class="col-md-1 col-xs-5">
+        <%= image_tag("ico-company-default.png", class: 'img-responsive img-company') %>
+      </div>
+      <div class="col-md-9 col-xs-6">
+        <div class="vacancy-title">
+          <span class="text-primary show-title-vacancy">
+            <%= vacancy.job_title %>
+          </span>
+        </div>
+        <div class="vacancy-details">
+          <span><i class="fa fa-briefcase" aria-hidden="true"></i><%= vacancy.company_name %></span>
+          <span><i class="fa fa-map-marker" aria-hidden="true"></i><%= vacancy.location %></span>
+         </div>
+       </div>
+    </div>
+  <% end %>
+</section>
