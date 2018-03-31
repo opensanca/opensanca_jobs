@@ -10,7 +10,7 @@ RSpec.feature 'Edit vacancy', type: :feature do
       zoo_keeper = create(:vacancy, job_title: 'ZooKeeper', company_id: user.company.id)
       visit company_vacancies_path(as: user)
 
-      click_link 'Edit', href: edit_vacancy_path(zoo_keeper.id)
+      click_link zoo_keeper.job_title
 
       expect(current_path).to eql(edit_vacancy_path(zoo_keeper.id))
       expect(page).to have_content(I18n.t('vacancies.edit.edit_vacancies'), wait: 10)
