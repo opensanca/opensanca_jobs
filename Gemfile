@@ -58,9 +58,12 @@ group :development, :test do
   gem 'chromedriver-helper'
   gem 'factory_girl_rails'
   gem 'fuubar'
+  gem 'guard'
+  gem 'guard-rspec'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
+  gem 'terminal-notifier-guard'
 
   # environment variables
   gem 'dotenv-rails'
