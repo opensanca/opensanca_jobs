@@ -100,7 +100,7 @@ GEM
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
     formatador (0.2.5)
-    friendly_id (5.2.1)
+    friendly_id (5.2.4)
       activerecord (>= 4.0.0)
     fuubar (2.2.0)
       rspec-core (~> 3.0)
