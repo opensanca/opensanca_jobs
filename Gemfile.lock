@@ -191,13 +191,13 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
-    rails_best_practices (1.19.0)
+    rails_best_practices (1.19.3)
       activesupport
       code_analyzer (>= 0.4.8)
       erubis
       i18n
       json
-      require_all
+      require_all (~> 2.0)
       ruby-progressbar
     railties (5.1.6)
       actionpack (= 5.1.6)
@@ -211,7 +211,7 @@ GEM
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     redis (3.3.3)
-    require_all (1.5.0)
+    require_all (2.0.0)
     rollbar (2.14.1)
       multi_json
     rspec (3.6.0)
@@ -242,7 +242,7 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    ruby-progressbar (1.9.0)
+    ruby-progressbar (1.10.0)
     rubyzip (1.2.1)
     sass (3.4.24)
     sass-rails (5.0.6)
@@ -254,7 +254,7 @@ GEM
     selenium-webdriver (3.9.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
-    sexp_processor (4.10.1)
+    sexp_processor (4.11.0)
     shellany (0.0.1)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
