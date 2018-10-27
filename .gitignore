@@ -23,3 +23,5 @@
 
 # RubyMine
 .idea/
+
+package-lock.json

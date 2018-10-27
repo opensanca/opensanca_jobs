@@ -12,13 +12,13 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 
 # Assets
-gem 'coffee-rails', '~> 4.2'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 4.7.0'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'summernote-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
+gem 'webpacker', '~> 3.5'
 
 # Authentication
 gem 'clearance'
