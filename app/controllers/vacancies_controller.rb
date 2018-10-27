@@ -8,6 +8,13 @@ class VacanciesController < ApplicationController
   def index
     @search = params[:search]
     @vacancies = Searchs::Vacancy.list(@search)
+    @filtered_by = {
+      name: 'Projeto Dumont',
+      domain: 'https://getdumont.com',
+      description: 'Projeto Social dedicado à saúde mental. Criado de uma pesquisa sobre depressão, ansiedade e estresse, seu foco é aumentar visibilidade do assunto no Brasil.',
+      background: 'https://raw.githubusercontent.com/getdumont/getdumont.github.io/master/assets/images/banner.png',
+      logo: 'https://getdumont.com/assets/images/icons/apple-icon-180x180.png'
+    }
   end
 
   def new

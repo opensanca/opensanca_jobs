@@ -1,6 +1,9 @@
 $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 $error-color: #b94a48;
 $error-background-color: #f2dede;
+$white: #FFF;
+$box-shadow-vacancy: rgba(160, 160, 160, 0.8);
+$grey: #ddd;
 
 @import "variables";
 @import "font-awesome-sprockets";
@@ -33,6 +36,60 @@ body {
   padding: 1% 0;
 }
 
+
+.bg-index-image {
+  background-position: center center;
+  background-size: cover;
+  min-height: 20vh;
+  padding: 10px;
+  position: relative;
+
+  &::after {
+    background: $box-shadow-vacancy;
+    bottom: 0;
+    content: " ";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.company-block {
+  border: 1px solid $grey;
+}
+
+.company-logo {
+  border: 5px solid $white;
+  border-radius: 10px;
+  bottom: -140px;
+  box-shadow: 0 0 10px 0 $box-shadow-vacancy;
+  height: 180px;
+  left: 5%;
+  position: absolute;
+  right: 0;
+  width: 180px;
+  z-index: 2;
+}
+
+.company-info-row {
+  background: $white;
+  position: relative;
+}
+
+.info-block {
+  padding: 20px 20px 20px 30%;
+
+  > h2 {
+    margin: 0;
+  }
+
+  > p {
+    margin: 0;
+    padding: 15px 0 0;
+  }
+}
+
 .bg-vacancy-intro {
     background: url(asset-path('bg-intro-vacancy3.jpg')) no-repeat center center;
     min-height: 45vh;
@@ -42,7 +99,7 @@ body {
 
 .bg-vacancy-intro h1 {
   padding-top: 75px;
-  color: #fff;
+  color: $white;
   text-transform: capitalize;
   font-size: 2em;
 }
@@ -59,14 +116,14 @@ body {
   margin-bottom: 20px;
 
   .vacancy-item {
-    background: #fff;
-    border: 1px solid #ddd;
+    background: $white;
+    border: 1px solid $grey;
     margin-bottom: 16px;
     border-left: 2px solid #4a8cc4;
     padding: 15px;
 
     &:hover {
-      box-shadow:10px 6px 11px rgba(136, 136, 136, 0.64);
+      box-shadow: 10px 6px 11px $box-shadow-vacancy;
     }
 
     div {
@@ -135,9 +192,9 @@ body {
   border: transparent;
 
   &.btn-primary:focus, .btn-primary.focus {
-    color: #fff;
     background-color: #1f8b79;
     border-color: #1f8b79;
+    color: $white;
   }
 }
 
@@ -159,7 +216,7 @@ body {
 }
 
 .view-vacancy {
-  background-color: #fff;
+  background-color: $white;
   padding: 10px;
   margin-top: 10px;
 }
@@ -204,7 +261,7 @@ body {
 }
 
 .describe-vacancy {
-  background-color: #fff;
+  background-color: $white;
   margin-top: 10px;
   padding: 10px;
 }

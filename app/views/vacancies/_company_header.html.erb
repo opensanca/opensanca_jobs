@@ -1,0 +1,15 @@
+<section class="company-block">
+    <div class="bg-index-image" style="background-image:url('<%= company[:background] %>')">
+        <img class="company-logo" src="<%= company[:logo] %>" alt="logo" />
+    </div>
+    <div class="company-info-row">
+        <div class="info-block">
+            <h2><%= company[:name] %></h2>
+            <p><%= company[:description] %><p>
+            <span>
+                <i class="fal fa-globe-americas"></i>
+                <a href="<%= company[:domain] %>"><%= company[:domain] %><a>
+            <span>
+        </div>
+    </div>
+</section>
