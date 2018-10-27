@@ -53,7 +53,7 @@ GEM
     bindex (0.5.0)
     bootsnap (1.1.8)
       msgpack (~> 1.0)
-    brakeman (3.6.2)
+    brakeman (4.3.1)
     bugsnag (5.3.2)
     builder (3.2.3)
     capybara (2.17.0)
