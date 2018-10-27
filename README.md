@@ -99,10 +99,10 @@ Starting containers
 $ docker-compose up
 ```
 
-Configure database schemas and migrations
+Configure database schemas and migrations (the containers should be up for the command below to work, so be sure to run the command above before proceeding):
 
 ```
-$ docker-compose run --rm web bin/setup
+$ docker-compose exec web bin/setup
 ```
 
 ## Done
