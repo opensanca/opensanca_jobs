@@ -12,6 +12,7 @@ RUN apk update \
     build-base \
     tzdata \
     postgresql-dev \
+    postgresql-client \
     nodejs \
   && wget https://yarnpkg.com/latest.tar.gz \
   && mkdir -p /opt/yarn \
