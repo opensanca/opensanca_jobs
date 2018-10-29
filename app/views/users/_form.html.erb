@@ -11,4 +11,5 @@
 <%= form.fields_for :company, @user.company || @user.build_company do |company_form| %>
   <%= company_form.text_field :name, class: 'field', placeholder: Company.human_attribute_name(:name) %>
   <%= company_form.text_field :url,  class: 'field', placeholder: Company.human_attribute_name(:url) %>
+  <%= company_form.text_field :domain,  class: 'field', placeholder: Company.human_attribute_name(:domain) %>
 <% end %>

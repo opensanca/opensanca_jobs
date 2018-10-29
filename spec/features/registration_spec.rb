@@ -14,8 +14,11 @@ RSpec.feature 'Registration', type: :feature do
 
     fill_in placeholder: 'Company name',    with: 'Galactic Empire'
     fill_in placeholder: 'Company website', with: 'http://galacticempire.com'
+    fill_in placeholder: 'Custom domain',   with: 'empire'
 
     click_on 'Sign up'
+
+    expect(Company.last).to have_attributes(domain: 'empire', url: 'http://galacticempire.com', name: 'Galactic Empire')
 
     expect(page).to have_text 'Submit your vacancy'
     expect(page).to have_text 'Logout'

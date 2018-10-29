@@ -10,3 +10,4 @@ en:
       company:
         name: Company name
         url: Company website
+        domain: Custom domain

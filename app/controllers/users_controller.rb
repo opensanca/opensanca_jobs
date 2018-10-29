@@ -4,6 +4,6 @@ class UsersController < Clearance::UsersController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, company_attributes: %i[name url])
+    params.require(:user).permit(:email, :password, company_attributes: %i[name url domain])
   end
 end

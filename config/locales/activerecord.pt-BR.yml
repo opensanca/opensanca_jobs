@@ -10,4 +10,5 @@ pt-BR:
       company:
         name: Nome da Empresa
         url: Site da Empresa
+        domain: Domínio Customizado
 
