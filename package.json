@@ -23,14 +23,14 @@
     "style-loader": "^0.18.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.1.0",
     "babel-core": "^6.25.0",
     "babel-loader": "7.x",
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.23.0",
-    "coffee-loader": "^0.7.3",
-    "coffee-script": "^1.12.6",
     "glob": "^7.1.2",
     "path-complete-extname": "^0.1.0",
-    "rails-erb-loader": "^5.0.2"
+    "rails-erb-loader": "^5.0.2",
+    "webpack": "^4.23.1"
   }
 }
