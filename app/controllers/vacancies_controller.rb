@@ -7,7 +7,7 @@ class VacanciesController < ApplicationController
 
   def index
     @search = params[:search]
-    @vacancies = Searchs::Vacancy.list(@search)
+    @vacancies = Searchs::Vacancy.list(@search, @filtered_by)
   end
 
   def new
