@@ -37,5 +37,15 @@ describe Searchs::Vacancy, type: :search do
         it { is_expected.to eq([vacancy]) }
       end
     end
+
+    context 'with company parameter' do
+      let(:company)        { create(:company, name: 'Galactic Empire') }
+      let(:other_company)  { create(:company, name: 'Evil Company') }
+      let!(:vacancy)       { create(:vacancy, job_title: 'programador ruby', company: company) }
+      let!(:other_vacancy) { create(:vacancy, job_title: 'programador java', company: other_company) }
+      it 'returns only company\'s vacancies' do
+        expect(Searchs::Vacancy.list(nil, company)).to eq [vacancy]
+      end
+    end
   end
 end
