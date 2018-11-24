@@ -7,16 +7,13 @@ module Searchs
     end
 
     def list(query = nil, company = nil)
-      if query.blank?
-        vacancies = @repository.recent
-      else
-        query = query.split.map { |entry| "#{entry}:*" }.join(' & ')
-        vacancies = @repository.where(<<~SQL, query: query)
-          tsv @@ to_tsquery('portuguese', :query) OR company_tsv @@ to_tsquery('portuguese', :query)
-        SQL
-      end
-      vacancies = vacancies.where company: company if company
-      vacancies
+      scope = company.present? ? @repository.where(company: company) : @repository
+      return scope.recent if query.blank?
+
+      query = query.split.map { |entry| "#{entry}:*" }.join(' & ')
+      scope.where(<<~SQL, query: query)
+        tsv @@ to_tsquery('portuguese', :query) OR company_tsv @@ to_tsquery('portuguese', :query)
+      SQL
     end
 
     def self.list(query = nil, company = nil)
