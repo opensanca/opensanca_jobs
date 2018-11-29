@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
   include Clearance::Controller
   protect_from_forgery with: :exception
-  before_action :check_company_subdomain
+  before_action :filter_by_company
 
   private
 
@@ -12,12 +12,19 @@ class ApplicationController < ActionController::Base
     current_user.company
   end
 
-  def check_company_subdomain
+  def filter_by_company
+    if company_subdomain?
+      @filter_by = matching_company || not_found
+    end
+  end
+
+  def company_subdomain?
     subdomain = request.subdomain
-    return if subdomain.empty? || subdomain == 'www'
-    matching_company = Company.find_by domain: subdomain
-    not_found unless matching_company
-    @filtered_by = matching_company
+    !subdomain.empty? && subdomain != 'www'
+  end
+
+  def matching_company
+    Company.find_by(domain: request.subdomain)
   end
 
   def not_found
