@@ -27,7 +27,7 @@ RSpec.feature 'Visit index page', type: :feature do
 
   context 'with subdomain' do
     within_subdomain 'galacticempire' do
-      scenario 'lists only the company\'s vacancies' do
+      scenario "lists only the company's vacancies" do
         company = create(:company, domain: 'galacticempire')
         other_company = create(:company)
         vacancy = create(:vacancy, company: company, job_title: 'Chief Universal Officer')
