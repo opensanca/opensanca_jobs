@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
   include Clearance::Controller
   protect_from_forgery with: :exception
-  before_action :filter_by_company
+  before_action :filter_by_company, if: :company_subdomain?
 
   private
 
@@ -13,9 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def filter_by_company
-    if company_subdomain?
-      @filter_by = matching_company || not_found
-    end
+    @filter_by = matching_company || not_found
   end
 
   def company_subdomain?
