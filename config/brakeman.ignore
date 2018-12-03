@@ -3,13 +3,13 @@
     {
       "warning_type": "Dynamic Render Path",
       "warning_code": 15,
-      "fingerprint": "0fec207730e6e49e3a26072db4ac2c9340f15edc89c34369d217312b131b0f30",
+      "fingerprint": "43d057d354420a5510904cd24ce57bfbb5c7adc5fd89cd7a4d238e9a5455ad9d",
       "check_name": "Render",
       "message": "Render path contains parameter value",
       "file": "app/views/vacancies/index.html.erb",
-      "line": 18,
-      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
-      "code": "render(action => Searchs::Vacancy.list(params[:search]), {})",
+      "line": 17,
+      "link": "http://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
+      "code": "render(action => Searchs::Vacancy.list(params[:search], @filter_by), {})",
       "render_path": [{"type":"controller","class":"VacanciesController","method":"index","line":11,"file":"app/controllers/vacancies_controller.rb"}],
       "location": {
         "type": "template",

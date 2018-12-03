@@ -13,6 +13,14 @@ require 'faker'
 
 ActiveRecord::Migration.maintain_test_schema!
 
+module FeatureSubdomainHelpers
+  def within_subdomain(subdomain)
+    before { Capybara.app_host = "http://#{subdomain}.example.com" }
+    after  { Capybara.app_host = 'http://example.com' }
+    yield
+  end
+end
+
 RSpec.configure do |config|
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -29,6 +37,8 @@ RSpec.configure do |config|
     Rails.application.config.action_dispatch.show_exceptions = false
     Rails.application.config.consider_all_requests_local = true
   end
+
+  config.extend FeatureSubdomainHelpers, type: :feature
 end
 
 Capybara.default_driver = ENV.fetch('CAPYBARA_DRIVER') { 'rack_test' }.to_sym
