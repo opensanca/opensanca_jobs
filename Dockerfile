@@ -5,6 +5,8 @@ LABEL maintainer="opensanca@opensanca.com"
 ARG rails_env="development"
 ARG build_without=""
 
+ENV SECRET_KEY_BASE=dumb
+
 RUN apk update \
   && apk add \
     openssl \
