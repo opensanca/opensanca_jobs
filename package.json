@@ -2,7 +2,7 @@
   "name": "opensanca_jobs",
   "private": true,
   "engines": {
-    "node": "8.10.0"
+    "node": "8.9.3"
   },
   "dependencies": {
     "autoprefixer": "^7.1.1",
