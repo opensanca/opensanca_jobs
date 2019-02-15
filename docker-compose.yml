@@ -21,8 +21,12 @@ services:
       timeout: 5s
       retries: 3
 
-  web:
-    build: .
+  web: &base_image
+    build: 
+      context: .
+      args:
+        - extra_packages=nodejs
+        - rails_env=development
     depends_on:
       - db
       - redis
@@ -33,15 +37,16 @@ services:
       - 3000:3000
     volumes:
       - .:/var/app
-      - gemdata:/gems
-    command: rails s -b '0.0.0.0'
+      - gemdata:/usr/local/bundle/
+    command: bin/rails s -b '0.0.0.0'
     environment:
       DATABASE_URL: postgres://postgres:@db/
+      EXECJS_RUNTIME: Node
       REDIS_URL: redis://redis:6379
       SMTP_ADDRESS: mail
 
   jobs:
-    build: .
+    <<: *base_image
     depends_on:
       - db
       - redis
@@ -50,12 +55,9 @@ services:
       - redis
     volumes:
       - .:/var/app
-      - gemdata:/gems
-    command: sidekiq -q critical,2 -q default
-    environment:
-      DATABASE_URL: postgres://postgres:@db/
-      REDIS_URL: redis://redis:6379
-      SMTP_ADDRESS: mail
+      - gemdata:/usr/local/bundle/
+    command: bundle exec sidekiq -q critical,2 -q default
+    ports: []
 
   mail:
     image: mailhog/mailhog:latest
