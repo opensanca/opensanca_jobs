@@ -275,6 +275,10 @@ GEM
       connection_pool (~> 2.2, >= 2.2.2)
       rack-protection (>= 1.5.0)
       redis (>= 3.3.5, < 5)
+    skylight (3.1.4)
+      skylight-core (= 3.1.4)
+    skylight-core (3.1.4)
+      activesupport (>= 4.2.0)
     slack-notifier (2.3.2)
     slop (3.6.0)
     spring (2.0.2)
@@ -355,6 +359,7 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-matchers
   sidekiq
+  skylight
   slack-notifier
   spring
   spring-watcher-listen (~> 2.0.0)

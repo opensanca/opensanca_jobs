@@ -42,6 +42,7 @@ gem 'slack-notifier' # Send notifications to slack channels
 gem 'bugsnag'
 gem 'newrelic_rpm'
 gem 'rollbar'
+gem 'skylight'
 
 group :development, :test do
   # Code analysis
