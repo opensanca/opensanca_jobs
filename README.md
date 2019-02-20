@@ -4,6 +4,9 @@
 
 [![Build Status](https://semaphoreci.com/api/v1/duduribeiro/opensanca_jobs/branches/master/badge.svg)](https://semaphoreci.com/duduribeiro/opensanca_jobs)
 
+## Performance Monitoring
+[![View performance data on Skylight](https://badges.skylight.io/status/DcznfPslijBl.svg)](https://oss.skylight.io/app/applications/DcznfPslijBl)
+
 ## Get Started
 
 ```
