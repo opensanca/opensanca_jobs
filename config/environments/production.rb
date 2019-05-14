@@ -104,5 +104,5 @@ Rails.application.configure do
   ActionMailer::Base.delivery_method = :smtp
 
   # Enable HSTS and forcefully redirect unsecure requests
-  config.force_ssl = true
+  # config.force_ssl = true
 end
