@@ -171,7 +171,7 @@ GEM
     pry-nav (0.2.4)
       pry (>= 0.9.10, < 0.11.0)
     public_suffix (3.0.3)
-    puma (3.12.0)
+    puma (3.12.2)
     rack (2.0.5)
     rack-mini-profiler (1.0.0)
       rack (>= 1.2.0)
