@@ -4,7 +4,6 @@ require 'rails_helper'
 
 RSpec.describe Company, type: :model do
   it { is_expected.to validate_presence_of(:name) }
-  it { is_expected.to validate_presence_of(:url) }
 
   context 'validate company url' do
     it { is_expected.to allow_value('http://opensanca.com.br').for(:url) }
