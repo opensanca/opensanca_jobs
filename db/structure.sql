@@ -1,10 +1,3 @@
---
--- PostgreSQL database dump
---
-
--- Dumped from database version 11.5 (Debian 11.5-1.pgdg90+1)
--- Dumped by pg_dump version 11.3
-
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
@@ -18,7 +11,7 @@ SET row_security = off;
 
 SET default_tablespace = '';
 
-SET default_with_oids = false;
+SET default_table_access_method = heap;
 
 --
 -- Name: ar_internal_metadata; Type: TABLE; Schema: public; Owner: -
@@ -277,17 +270,34 @@ CREATE INDEX index_vacancies_on_tsv ON public.vacancies USING gin (tsv);
 -- Name: companies companies_tsvectorupdate; Type: TRIGGER; Schema: public; Owner: -
 --
 
-CREATE TRIGGER companies_tsvectorupdate BEFORE INSERT OR UPDATE ON public.companies FOR EACH ROW EXECUTE PROCEDURE tsvector_update_trigger('company_tsv', 'pg_catalog.portuguese', 'name');
+CREATE TRIGGER companies_tsvectorupdate BEFORE INSERT OR UPDATE ON public.companies FOR EACH ROW EXECUTE FUNCTION tsvector_update_trigger('company_tsv', 'pg_catalog.portuguese', 'name');
 
 
 --
 -- Name: vacancies vacancies_tsvectorupdate; Type: TRIGGER; Schema: public; Owner: -
 --
 
-CREATE TRIGGER vacancies_tsvectorupdate BEFORE INSERT OR UPDATE ON public.vacancies FOR EACH ROW EXECUTE PROCEDURE tsvector_update_trigger('tsv', 'pg_catalog.portuguese', 'location', 'job_title', 'description');
+CREATE TRIGGER vacancies_tsvectorupdate BEFORE INSERT OR UPDATE ON public.vacancies FOR EACH ROW EXECUTE FUNCTION tsvector_update_trigger('tsv', 'pg_catalog.portuguese', 'location', 'job_title', 'description');
 
 
 --
 -- PostgreSQL database dump complete
 --
+
+SET search_path TO "$user", public;
+
+INSERT INTO "schema_migrations" (version) VALUES
+('20170222022125'),
+('20170304231833'),
+('20170314043437'),
+('20170329184143'),
+('20180216223455'),
+('20180220224847'),
+('20180220231334'),
+('20180220232910'),
+('20180221233924'),
+('20180305210520'),
+('20181027190121'),
+('20191024195622');
+
 

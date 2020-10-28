@@ -1,5 +1,5 @@
 # build stage
-FROM ruby:2.5.0-alpine AS builder
+FROM ruby:2.7.2-alpine AS builder
 
 ARG build_without
 ARG rails_env="development"
@@ -33,7 +33,7 @@ RUN bundle install && yarn && bundle exec rake assets:precompile \
  && rm -rf $to_remove
 
 # final stage
-FROM ruby:2.5.0-alpine
+FROM ruby:2.7.2-alpine
 LABEL maintainer="contato@opensanca.com.br"
 
 ARG extra_packages

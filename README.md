@@ -32,7 +32,7 @@ You can run OpenJobs locally by two ways.
 
 ##### Ruby
 
-The application uses Ruby 2.5.0. You should install it to run the application. (for development we recommend to use [RVM](https://rvm.io/))
+The application uses Ruby 2.7.2. You should install it to run the application. (for development we recommend to use [RVM](https://rvm.io/))
 
 ##### Postgres
 
