@@ -5,7 +5,7 @@ ruby '2.7.2'
 source 'https://rubygems.org'
 
 gem 'bootsnap'
-gem 'rails', '~> 5.2.1'
+gem 'rails', '~> 8.1.2'
 
 gem 'pg', '~> 0.18'
 
